@@ -1861,7 +1861,7 @@ const onSaveCancelReason = async () => {
                   <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white">
                     Sports World Dashboard
                   </p>
-                  <h1 className="mt-2 text-3xl font-black uppercase tracking-tight text-white md:text-4xl">
+                  <h1 className="mt-2 text-3xl font-black uppercase tracking-tight text-white md:text-4xl min-[320px]:max-[430px]:text-[26px]  min-[320px]:max-[430px]:leading-[32px]">
                     {isSeller
                       ? tab === "overview"
                         ? "Performance Hub"
@@ -1950,7 +1950,7 @@ const onSaveCancelReason = async () => {
                         <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-white">
                           Revenue Trends
                         </p>
-                        <h3 className="mt-2 text-2xl font-black uppercase tracking-tight text-white">
+                        <h3 className="mt-2 text-2xl font-black uppercase tracking-tight text-white min-[320px]:max-[400px]:text-[22px]">
                           {revenueTrendTitle}
                         </h3>
                       </div>

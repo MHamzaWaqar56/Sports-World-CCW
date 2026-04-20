@@ -190,10 +190,10 @@ const BusinessSummarySection = () => {
               <p className={`text-[11px] font-bold uppercase tracking-[0.28em] ${businessTheme.heading}`}>
                 Sports World Analytics
               </p>
-              <h3 className={`mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl ${businessTheme.heading}`}>
+              <h3 className={`mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px] ${businessTheme.heading}`}>
                 Business Summary
               </h3>
-              <p className={`mt-3 max-w-2xl text-sm leading-7 ${businessTheme.subtext}`}>
+              <p className={`mt-3 max-w-2xl text-sm leading-7 min-[320px]:max-[430px]:leading-[20px] ${businessTheme.subtext}`}>
                 Review sales, repair income, expenses, and operating-day performance in one
                 premium summary view.
               </p>
