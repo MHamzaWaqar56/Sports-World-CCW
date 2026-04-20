@@ -276,7 +276,7 @@ const BatRepairSection = () => {
         </div>
       </section>
       {selectedRepairNote && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent p-4">
           <div className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-[#10151d] p-6 shadow-[0_32px_100px_-40px_rgba(0,0,0,1)]">
             <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
               <div>

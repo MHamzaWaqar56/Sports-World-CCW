@@ -582,7 +582,7 @@ const handlePromoApply = async () => {
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-slate-900/70 backdrop-blur-sm"
+              className="absolute inset-0 bg-transparent"
               onClick={() => !isProcessing && setShowCheckout(false)}
             />
 
@@ -872,7 +872,7 @@ const handlePromoApply = async () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowShippingGuide(false)}
-              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+              className="absolute inset-0 bg-transparent"
             />
 
             <motion.div
