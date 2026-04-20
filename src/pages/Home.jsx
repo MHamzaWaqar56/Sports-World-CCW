@@ -287,11 +287,11 @@ const Home = () => {
               <TrendingUp size={16} className="text-primary-500" />
               <span>Premium Athletic Goods</span>
             </div>
-            <h1 className="mt-6 max-w-3xl text-4xl min-[320px]:max-[430px]:text-[32px] font-black uppercase leading-[0.9] tracking-tight text-white sm:text-5xl md:text-7xl xl:text-[5.8rem]">
+            <h1 className="mt-6 max-w-3xl text-4xl font-black uppercase leading-[0.9] tracking-tight text-white sm:text-5xl md:text-7xl xl:text-[5.8rem]">
               Built For
               <span className="mt-1 block"><span className="text-primary-500">Serious</span> Players</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-base leading-7 min-[320px]:max-[430px]:text-[14px] min-[320px]:max-[430px]:leading-[22px] text-slate-300 sm:text-lg sm:leading-8 lg:mx-0 lg:text-xl">
+            <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8 lg:mx-0 lg:text-xl">
               Sports World brings premium cricket and athletic gear together in one sharp destination for players who expect quality, trust, and performance from every purchase.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
@@ -356,7 +356,7 @@ const Home = () => {
       <section className="overflow-hidden border-y border-white/10 bg-primary-600 py-2.5 sm:py-3">
         <div className="flex animate-[marquee_28s_linear_infinite] whitespace-nowrap">
           {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="mx-8 inline-flex min-[320px]:max-[430p]:text-[10px] items-center gap-2 text-sm font-bold uppercase tracking-widest text-white">
+            <span key={i} className="mx-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white">
               <item.icon size={14} className="shrink-0 text-white/90" />
               <span>{item.text}</span>
               <span className="mx-8 text-white/40">|</span>
@@ -376,10 +376,10 @@ const Home = () => {
             <div className="inline-flex text-white items-center gap-2 rounded-full border border-primary-500/40 bg-primary-500/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary-300">
               <span className="h-2 w-2 animate-pulse text-white rounded-full bg-primary-500" /> Flash Sale Live
             </div>
-            <h2 className="mt-3 text-2xl min-[320px]:max-[430px]:text-[18px] font-black leading-tight text-white sm:text-3xl md:text-4xl">
+            <h2 className="mt-3 text-2xl font-black leading-tight text-white sm:text-3xl md:text-4xl">
               Season Opener Sale — Up to <span className="text-primary-500">40% Off</span>
             </h2>
-            <p className="mt-2 text-sm leading-6 text-slate-400 sm:text-base min-[320px]:max-[430px]:leading-[22px]">
+            <p className="mt-2 text-sm leading-6 text-slate-400 sm:text-base">
               Limited stock. Premium gear at unbeatable prices. Don't miss it.
             </p>
           </div>
@@ -408,7 +408,7 @@ const Home = () => {
           <div className="relative z-10 mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <span className="section-kicker border-white/10 bg-white text-primary-300">Equip Your Ambition</span>
-              <h2 className="mt-4 text-4xl font-extrabold tracking-tight  md:text-5xl min-[320px]:max-[430px]:text-[32px] min-[320px]:max-[430px]:leading-[36px]">Premium collections for every serious phase of the game.</h2>
+              <h2 className="mt-4 text-4xl font-extrabold tracking-tight  md:text-5xl">Premium collections for every serious phase of the game.</h2>
             </div>
             <Link to="/shop" className="btn-secondary group w-fit border-white/10 bg-white hover:bg-white/[0.08]">
               View All Gear <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -446,7 +446,7 @@ const Home = () => {
               <div className="absolute top-4 right-4 rounded-full border border-white/10  px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-300">{feat.badge}</div>
               <div className="mb-4 inline-flex rounded-2xl bg-primary-500/12 p-3 text-primary-400"><feat.icon size={24} /></div>
               <h3 className="text-base font-black ">{feat.title}</h3>
-              <p className="mt-2 text-sm leading-6 min-[320px]:max-[430px]:leading-[20px] text-slate-400">{feat.desc}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-400">{feat.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -462,7 +462,7 @@ const Home = () => {
           <div className="mb-14 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <span className="section-kicker border-white/10 bg-white text-primary-300">Featured Gear</span>
-              <h2 className="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl min-[320px]:max-[430px]:text-[32px] min-[320px]:max-[430px]:leading-[36px]">Clean picks for players building a sharper kit.</h2>
+              <h2 className="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">Clean picks for players building a sharper kit.</h2>
             </div>
             <div className="max-w-md space-y-2 text-sm leading-6 text-slate-400">
               {featuredCallouts.map((item) => (
@@ -505,7 +505,7 @@ const Home = () => {
       <span className="section-kicker justify-center border-white/10 bg-white">
         Why Sports World
       </span>
-      <h2 className="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl min-[320px]:max-[430px]:text-[32px] min-[320px]:max-[430px]:leading-[36px]">
+      <h2 className="mt-4 text-4xl font-extrabold tracking-tight md:text-5xl">
         We're built <span className="text-primary-500">different.</span>
       </h2>
       <p className="mt-3 text-slate-500">
@@ -522,7 +522,7 @@ const Home = () => {
         {/* Table header */}
         <div className="grid grid-cols-3 border-b border-white/10 dark:bg-white/[0.05] bg-white px-5 py-3.5">
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] ">Feature</p>
-          <div className="flex items-center min-[320px]:max-[430px]:text-center justify-center gap-1.5 rounded-lg bg-primary-500/10 py-1 text-[11px] font-bold uppercase tracking-[0.15em] text-primary-400">
+          <div className="flex items-center justify-center gap-1.5 rounded-lg bg-primary-500/10 py-1 text-[11px] font-bold uppercase tracking-[0.15em] text-primary-400">
             <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
             Sports World
           </div>
@@ -648,7 +648,7 @@ const Home = () => {
       <span className="section-kicker justify-center border-white/10 bg-white/[0.04] text-primary-300 text-white">
         Verified Reviews
       </span>
-      <h2 className="mt-4 text-4xl min-[320px]:max-[430px]:text-[32px] min-[320px]:max-[430px]:leading-[36px] font-extrabold tracking-tight text-white md:text-5xl">
+      <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
         What players say about Sports World.
       </h2>
       <p className="mt-3 text-sm text-slate-500">
@@ -689,10 +689,10 @@ const Home = () => {
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:40px_40px] pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-600/20 rounded-full blur-[100px] pointer-events-none" />
           <div className="relative z-10 max-w-xl mx-auto">
-            <div className="mb-4 inline-flex text-white items-center min-[320px]:max-[430px]:text-[10px] gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-300">
+            <div className="mb-4 inline-flex text-white items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-300">
               <TrendingUp size={12} />New Arrivals Every Week
             </div>
-            <h2 className="text-3xl font-black text-white md:text-4xl mb-4 min-[320px]:max-[430px]:leading-[30px]">
+            <h2 className="text-3xl font-black text-white md:text-4xl mb-4">
               Can't find what you need?
             </h2>
             <p className="text-slate-400 mb-8 leading-relaxed">

@@ -24,7 +24,7 @@ const Footer = () => {
             </Link>
 
             <p className="mb-6 max-w-sm leading-7 text-slate-400">
-              Sports World is a premium destination for sports and athletic essentials, bringing together quality gear, trusted service, and dependable delivery for serious players.
+              Sports World is a premium destination for cricket and athletic essentials, bringing together quality gear, trusted service, and dependable delivery for serious players.
             </p>
 
             <div className="mb-7 rounded-[1.6rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl">
@@ -117,7 +117,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-8 text-center md:flex-row md:text-left">
-          <p className="text-[14px] text-slate-500 min-[320px]:max-[400px]:text-[13px]">
+          <p className="text-sm text-slate-500">
             © {new Date().getFullYear()} Sports World. All rights reserved, Developed by{' '}
             <span className="font-semibold text-slate-300 transition-all duration-300 hover:bg-gradient-to-r hover:from-rose-300 hover:via-primary-500 hover:to-primary-600 hover:bg-clip-text hover:text-transparent hover:drop-shadow-[0_0_10px_rgba(244,63,94,0.42)]">
               M Hamza Waqar

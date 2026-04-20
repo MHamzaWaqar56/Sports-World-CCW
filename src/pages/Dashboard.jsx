@@ -2835,6 +2835,10 @@ const onSaveCancelReason = async () => {
                             </p>
                           </td>
 
+                          {/* Date */}
+                          {/* <td className="text-center text-slate-600 dark:text-slate-400">
+                            {order.createdAt?.substring(0, 10)}
+                          </td> */}
 
                           {/* Amount */}
                           <td className="text-center font-bold text-slate-900 dark:text-white">

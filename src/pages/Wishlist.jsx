@@ -43,12 +43,12 @@ const NotLoggedIn = () => (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(220,38,38,0.12),transparent_60%)]" />
           <div className="relative z-10">
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-white/[0.05]">
-              <Heart size={36} className="dark:text-primary-400 text-white" />
+              <Heart size={36} className="text-primary-400" />
             </div>
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white dark:text-primary-300">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-300">
               <LogIn size={11} />Login Required
             </div>
-            <h2 className="text-3xl max-[600px]:text-[2xl] font-black uppercase tracking-tight text-white mb-4">
+            <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-4">
               Sign In to View<br />Your Wishlist
             </h2>
             <p className="text-slate-400 text-sm leading-7 mb-8">
