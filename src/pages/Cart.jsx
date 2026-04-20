@@ -368,7 +368,7 @@ const handlePromoApply = async () => {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
               Your cart is empty
             </h2>
-            <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-10 leading-relaxed text-center">
+            <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-10 leading-relaxed text-center min-[320px]:max-[420px]:text-[14px] min-[320px]:max-[420px]:leading-[20px]">
               Looks like you haven't added anything yet. Browse our premium cricket, football, and fitness gear — delivered fast in Chichawatni.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -539,7 +539,7 @@ const handlePromoApply = async () => {
 
                   {/* Total */}
                   <div className="border-t border-dashed border-slate-200 dark:border-dark-border pt-4 mt-2">
-                    <div className="flex justify-between items-end">
+                    <div className="flex justify-between items-center">
                       <span className="font-black text-sm text-slate-900 dark:text-white uppercase tracking-wider">Total</span>
                       <div className="text-right">
                         <span className="font-black text-3xl text-slate-900 dark:text-white tracking-tight leading-none">
@@ -901,7 +901,7 @@ const handlePromoApply = async () => {
               </div>
 
               <div className="space-y-4 px-6 py-6">
-                <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">
+                <p className="text-sm leading-6 text-slate-600 dark:text-slate-300 text-justify min-[320px]:max-[430px]:leading-[20px]">
                   Shipping fees are calculated based on the subtotal of the items. This fee is added before the discount is applied, and then apply the promo discount to the final total.
                 </p>
 
