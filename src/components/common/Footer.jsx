@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="mb-6 max-w-sm leading-7 text-slate-400">
+            <p className="mb-6 max-w-sm leading-7 text-slate-400 text-justify min-[320px]:max-[430px]:leading-[24px]">
               Sports World is a premium destination for cricket and athletic essentials, bringing together quality gear, trusted service, and dependable delivery for serious players.
             </p>
 
@@ -107,7 +107,7 @@ const Footer = () => {
 
             <div className="mt-6 rounded-[1.6rem] border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-primary-300">Newsletter</p>
-              <p className="mt-3 text-sm leading-7 text-slate-400">
+              <p className="mt-3 text-sm leading-7 text-slate-400 min-[320px]:max-[420px]:text-[13px] min-[320px]:max-[430px]:leading-[20px]">
                 Join for product drops, seasonal offers, and curated gear updates from Sports World.
               </p>
             </div>
