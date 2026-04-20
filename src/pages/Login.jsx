@@ -166,7 +166,7 @@ const Login = () => {
             <div className="mb-8 lg:hidden">
               <Link to="/" className="inline-flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-600 text-sm font-black uppercase tracking-[0.18em] text-white">
-                  KS
+                  SW
                 </div>
                 <div>
                   <p className="text-xl font-black uppercase tracking-tight text-white">Sports World</p>
