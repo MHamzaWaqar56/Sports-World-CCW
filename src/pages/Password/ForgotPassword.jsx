@@ -123,7 +123,7 @@ const ForgotPassword = () => {
                 </div>
                 <div>
                   <p className="text-xl font-black uppercase tracking-tight text-white">Sports World</p>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-primary-300">Premium Athletic Goods</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-white">Premium Athletic Goods</p>
                 </div>
               </Link>
             </div>
@@ -142,13 +142,13 @@ const ForgotPassword = () => {
               </div>
 
               <div className="mb-8">
-                <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary-300">
+                <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-white">
                   Forgot Password
                 </p>
-                <h2 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
+                <h2 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl min-[320px]:max-[430px]:text-[22px] min-[320px]:max-[430px]:leading-[32px]">
                   Send Reset Instructions
                 </h2>
-                <p className="mt-3 text-sm leading-7 text-slate-400">
+                <p className="mt-3 text-sm leading-7 text-slate-400 min-[320px]:max-[430px]:leading-[20px]">
                   Enter your account email and we’ll send you a password reset link.
                 </p>
               </div>
@@ -180,7 +180,7 @@ const ForgotPassword = () => {
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </button>
 
-                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-7 text-slate-400">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-7 text-slate-400 min-[320px]:max-[430px]:leading-[20px] text-justify">
                   Check your inbox and spam folder. If you don’t see the email, make sure you entered the same address that you used to sign up.
                 </div>
               </form>
