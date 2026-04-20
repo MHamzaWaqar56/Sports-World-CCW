@@ -43,15 +43,15 @@ const NotLoggedIn = () => (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(220,38,38,0.12),transparent_60%)]" />
           <div className="relative z-10">
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-white/[0.05]">
-              <Heart size={36} className="text-primary-400" />
+              <Heart size={36} className="text-white" />
             </div>
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-300">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
               <LogIn size={11} />Login Required
             </div>
-            <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-4">
+            <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-4 min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px]">
               Sign In to View<br />Your Wishlist
             </h2>
-            <p className="text-slate-400 text-sm leading-7 mb-8">
+            <p className="text-slate-400 text-sm leading-7 mb-8 min-[320px]:max-[430px]:leading-[20px]">
               Save your favorite Sports World gear, track prices, and build your perfect match-day kit. Login to access your personal wishlist.
             </p>
             <div className="flex flex-col gap-3">
@@ -212,7 +212,7 @@ const Wishlist = () => {
             <div className="flex flex-col items-center">
               <motion.div
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
-                className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-xs font-bold uppercase tracking-[0.26em] text-white backdrop-blur-xl"
+                className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-xs font-bold uppercase tracking-[0.26em] text-white backdrop-blur-xl min-[320px]:max-[392px]:text-[10px]"
               >
                 <Heart size={12} className="fill-primary-400 text-primary-400" />Your Personal Collection
               </motion.div>
@@ -224,7 +224,7 @@ const Wishlist = () => {
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-                className="max-w-xl text-base leading-7 text-slate-300"
+                className="max-w-xl text-base leading-7 text-slate-300 min-[320px]:max-[430px]:leading-[20px]"
               >
                 Your saved premium gear — ready when you are. Every item you've hearted lives here.
               </motion.p>
@@ -234,7 +234,7 @@ const Wishlist = () => {
             {wishlistItems.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}
-                className="flex flex-wrap justify-center gap-3"
+                className="flex flex-wrap justify-center gap-3 min-[320px]:max-[430px]:flex-nowrap"
               >
                 <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-3 text-center">
                   <p className="text-2xl font-black text-white">{wishlistItems.length}</p>
@@ -422,10 +422,10 @@ const Wishlist = () => {
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white">
               <TrendingUp size={12} />New Arrivals Weekly
             </div>
-            <h2 className="text-3xl font-black text-white md:text-4xl mb-4">
+            <h2 className="text-3xl font-black text-white md:text-4xl mb-4 min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px]">
               Ready to upgrade your game?
             </h2>
-            <p className="text-slate-400 mb-8 leading-relaxed">
+            <p className="text-slate-400 mb-8 leading-relaxed min-[320px]:max-[400px]:hidden">
               Browse the full Sports World collection and discover premium gear worth adding to your wishlist — delivered right to your door in Chichawatni.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
