@@ -36,6 +36,7 @@ import { useAuthStore, useProductStore, useThemeStore } from "../store/useStore"
 import { useOrderStore } from "../store/useOrderStore";
 import { getImageUrl, getPrimaryProductImage } from "../utils/media";
 import { formatPrice } from "../utils/price";
+import ConfirmModal from "../components/common/ConfirmModal";
 import UploadStockSheetSection from "../components/admin/UploadStockSheetSection";
 import SalesReportSection from "../components/admin/SalesReportSection";
 import BusinessSummarySection from "../components/admin/BusinessSummarySection";
@@ -337,6 +338,7 @@ const Dashboard = () => {
   const [promoStatsModal, setPromoStatsModal] = useState(null);
   const [maxUses, setMaxUses] = useState('');
   const [confirmClearExpired, setConfirmClearExpired] = useState(false);
+  const [confirmDialog, setConfirmDialog] = useState(null);
   // const [promos, setPromos] = useState([]);
   const [saving, setSaving] = useState(false);
   const { fetchReviews, addReview } = useReviewStore();
@@ -636,14 +638,20 @@ const submitModalReview = async () => {
 };
 
 const onCancelOrder = async (oid) => {
-  if (!window.confirm("Are you sure you want to cancel this order?")) return;
-
-  try {
-    await cancelOrder(oid);
-    toast.success("Order cancelled");
-  } catch (e) {
-    toast.error(e.message || "Cancel failed");
-  }
+  openConfirmDialog({
+    title: 'Cancel Order',
+    description: 'Are you sure you want to cancel this order?',
+    confirmLabel: 'Yes, Cancel Order',
+    tone: 'warning',
+    onConfirm: async () => {
+      try {
+        await cancelOrder(oid);
+        toast.success('Order cancelled');
+      } catch (e) {
+        toast.error(e.message || 'Cancel failed');
+      }
+    },
+  });
 };
 
 const onOpenCancelReasonModal = (order, readOnly = false) => {
@@ -965,18 +973,55 @@ const onSaveCancelReason = async () => {
       ? { maxHeight: "720px", overflowY: "auto" }
       : undefined;
 
+  const openConfirmDialog = ({
+    title,
+    description,
+    confirmLabel = 'Confirm',
+    cancelLabel = 'Cancel',
+    tone = 'danger',
+    onConfirm,
+  }) => {
+    setConfirmDialog({
+      title,
+      description,
+      confirmLabel,
+      cancelLabel,
+      tone,
+      onConfirm,
+    });
+  };
+
+  const closeConfirmDialog = () => setConfirmDialog(null);
+
+  const handleConfirmDialogConfirm = async () => {
+    if (!confirmDialog?.onConfirm) {
+      closeConfirmDialog();
+      return;
+    }
+
+    await confirmDialog.onConfirm();
+    closeConfirmDialog();
+  };
+
   const onLogout = async () => {
     await logout();
     navigate("/login", { replace: true });
   };
   const onDelete = async (pid) => {
-    if (!window.confirm("Delete this product permanently?")) return;
-    try {
-      await deleteProduct(pid);
-      toast.success("Product deleted");
-    } catch (e) {
-      toast.error(e.message || "Delete failed");
-    }
+    openConfirmDialog({
+      title: 'Delete Product',
+      description: 'Delete this product permanently? This action cannot be undone.',
+      confirmLabel: 'Yes, Delete Product',
+      tone: 'danger',
+      onConfirm: async () => {
+        try {
+          await deleteProduct(pid);
+          toast.success('Product deleted');
+        } catch (e) {
+          toast.error(e.message || 'Delete failed');
+        }
+      },
+    });
   };
   const onDeliver = async (oid) => {
     try {
@@ -1169,20 +1214,22 @@ const onSaveCancelReason = async () => {
       toast.error("Select a product name to delete");
       return;
     }
-    if (
-      !window.confirm(
-        `Delete "${selectedProductOption}" from the product list?`,
-      )
-    )
-      return;
-    setProductNameOptions((prev) =>
-      prev.filter((option) => option !== selectedProductOption),
-    );
-    setForm((prev) => ({
-      ...prev,
-      productNameOption: "",
-      customProductName: "",
-    }));
+    openConfirmDialog({
+      title: 'Delete Product Name',
+      description: `Delete "${selectedProductOption}" from the product list?`,
+      confirmLabel: 'Yes, Delete',
+      tone: 'danger',
+      onConfirm: async () => {
+        setProductNameOptions((prev) =>
+          prev.filter((option) => option !== selectedProductOption),
+        );
+        setForm((prev) => ({
+          ...prev,
+          productNameOption: "",
+          customProductName: "",
+        }));
+      },
+    });
   };
   const onAddCategoryOption = () => {
     const nextCategory = window.prompt("Enter new category");
@@ -1255,21 +1302,27 @@ const onSaveCancelReason = async () => {
       toast.error("Select a category to delete");
       return;
     }
-    if (!window.confirm(`Delete "${form.category}" from the category list?`))
-      return;
-    setCategoryOptions((prev) =>
-      prev.filter((option) => option !== form.category),
-    );
-    setSpecificationOptionsMap((prev) => {
-      const next = { ...prev };
-      delete next[form.category];
-      return next;
+    openConfirmDialog({
+      title: 'Delete Category',
+      description: `Delete "${form.category}" from the category list?`,
+      confirmLabel: 'Yes, Delete',
+      tone: 'danger',
+      onConfirm: async () => {
+        setCategoryOptions((prev) =>
+          prev.filter((option) => option !== form.category),
+        );
+        setSpecificationOptionsMap((prev) => {
+          const next = { ...prev };
+          delete next[form.category];
+          return next;
+        });
+        setForm((prev) => ({
+          ...prev,
+          category: "",
+          specifications: [createSpec()],
+        }));
+      },
     });
-    setForm((prev) => ({
-      ...prev,
-      category: "",
-      specifications: [createSpec()],
-    }));
   };
   const onFeatureOptionChange = (index, value) =>
     setForm((prev) => ({
@@ -1348,23 +1401,29 @@ const onSaveCancelReason = async () => {
       toast.error("Select a feature to delete");
       return;
     }
-    if (!window.confirm(`Delete "${selectedOption}" from the feature list?`))
-      return;
-    setFeatureOptions((prev) =>
-      prev.filter((option) => option !== selectedOption),
-    );
-    setForm((prev) => ({
-      ...prev,
-      features: prev.features.map((feature, i) =>
-        feature.option === selectedOption
-          ? {
-              ...feature,
-              option: i === index ? "" : feature.option,
-              customValue: "",
-            }
-          : feature,
-      ),
-    }));
+    openConfirmDialog({
+      title: 'Delete Feature',
+      description: `Delete "${selectedOption}" from the feature list?`,
+      confirmLabel: 'Yes, Delete',
+      tone: 'danger',
+      onConfirm: async () => {
+        setFeatureOptions((prev) =>
+          prev.filter((option) => option !== selectedOption),
+        );
+        setForm((prev) => ({
+          ...prev,
+          features: prev.features.map((feature, i) =>
+            feature.option === selectedOption
+              ? {
+                  ...feature,
+                  option: i === index ? "" : feature.option,
+                  customValue: "",
+                }
+              : feature,
+          ),
+        }));
+      },
+    });
   };
   const onSpecificationOptionChange = (index, value) =>
     setForm((prev) => ({
@@ -1471,24 +1530,28 @@ const onSaveCancelReason = async () => {
       toast.error("Select a specification to delete");
       return;
     }
-    if (
-      !window.confirm(`Delete "${selectedOption}" from the specification list?`)
-    )
-      return;
-    setSpecificationOptionsMap((prev) => ({
-      ...prev,
-      [form.category]: prev[form.category].filter(
-        (option) => option !== selectedOption,
-      ),
-    }));
-    setForm((prev) => ({
-      ...prev,
-      specifications: prev.specifications.map((spec) =>
-        spec.option === selectedOption
-          ? { ...spec, option: "", customName: "" }
-          : spec,
-      ),
-    }));
+    openConfirmDialog({
+      title: 'Delete Specification',
+      description: `Delete "${selectedOption}" from the specification list?`,
+      confirmLabel: 'Yes, Delete',
+      tone: 'danger',
+      onConfirm: async () => {
+        setSpecificationOptionsMap((prev) => ({
+          ...prev,
+          [form.category]: prev[form.category].filter(
+            (option) => option !== selectedOption,
+          ),
+        }));
+        setForm((prev) => ({
+          ...prev,
+          specifications: prev.specifications.map((spec) =>
+            spec.option === selectedOption
+              ? { ...spec, option: "", customName: "" }
+              : spec,
+          ),
+        }));
+      },
+    });
   };
 
   const onMarkPaid = async (id) => {
@@ -4277,6 +4340,17 @@ const onSaveCancelReason = async () => {
     </motion.div>
   )}
 </AnimatePresence>
+      <ConfirmModal
+        open={Boolean(confirmDialog)}
+        title={confirmDialog?.title || 'Confirm Action'}
+        description={confirmDialog?.description || ''}
+        confirmLabel={confirmDialog?.confirmLabel || 'Confirm'}
+        cancelLabel={confirmDialog?.cancelLabel || 'Cancel'}
+        tone={confirmDialog?.tone || 'danger'}
+        loading={false}
+        onCancel={closeConfirmDialog}
+        onConfirm={handleConfirmDialogConfirm}
+      />
           </main>
         </div>
       </div>

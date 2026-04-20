@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import toast from 'react-hot-toast';
 import api from '../../api/axios';
 import { formatPrice } from '../../utils/price';
+import ConfirmModal from '../common/ConfirmModal';
 
 const repairTypes = ['Binding', 'Handle', 'Full Repair'];
 
@@ -29,6 +30,7 @@ const BatRepairSection = () => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState(createEmptyForm());
   const [selectedRepairNote, setSelectedRepairNote] = useState(null);
+  const [deleteConfirm, setDeleteConfirm] = useState(null);
 
   const profit = useMemo(
     () => (Number(form.charge) || 0) - (Number(form.cost) || 0),
@@ -84,18 +86,16 @@ const BatRepairSection = () => {
     setSelectedRepairNote(null);
   };
 
-  const handleDelete = async (repairId) => {
-    if (!window.confirm('Delete this bat repair entry?')) {
-      return;
-    }
+  const openDeleteConfirm = (repairId) => {
+    setDeleteConfirm(repairId);
+  };
 
-    try {
-      await api.delete(`/bat-repairs/${repairId}`);
-      toast.success('Bat repair deleted');
-      await loadRepairs();
-    } catch (error) {
-      toast.error(error.response?.data?.message || 'Failed to delete bat repair');
-    }
+  const closeDeleteConfirm = () => {
+    setDeleteConfirm(null);
+  };
+
+  const handleDelete = async (repairId) => {
+    openDeleteConfirm(repairId);
   };
 
   return (
@@ -314,6 +314,27 @@ const BatRepairSection = () => {
           </div>
         </div>
       )}
+      <ConfirmModal
+        open={Boolean(deleteConfirm)}
+        title="Delete Bat Repair"
+        description="Delete this bat repair entry? This action cannot be undone."
+        confirmLabel="Yes, Delete"
+        tone="danger"
+        onCancel={closeDeleteConfirm}
+        onConfirm={async () => {
+          if (!deleteConfirm) return;
+
+          try {
+            await api.delete(`/bat-repairs/${deleteConfirm}`);
+            toast.success('Bat repair deleted');
+            await loadRepairs();
+          } catch (error) {
+            toast.error(error.response?.data?.message || 'Failed to delete bat repair');
+          } finally {
+            closeDeleteConfirm();
+          }
+        }}
+      />
     </div>
   );
 };

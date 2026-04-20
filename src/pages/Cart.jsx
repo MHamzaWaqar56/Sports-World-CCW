@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { getPrimaryProductImage } from '../utils/media';
 import { formatPrice } from '../utils/price';
+import ConfirmModal from '../components/common/ConfirmModal';
 import {
   getCartItemStock,
   getCartItemUnitPrice,
@@ -208,6 +209,7 @@ const Cart = () => {
   const [promoCode, setPromoCode] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [showShippingGuide, setShowShippingGuide] = useState(false);
+  const [showClearCartConfirm, setShowClearCartConfirm] = useState(false);
 
   const isCodEligible = cartItems.every(item => item.codAvailable !== false);
 
@@ -336,7 +338,7 @@ const handlePromoApply = async () => {
             </div>
             {cartItems.length > 0 && (
               <button
-                onClick={() => { if (window.confirm('Clear all items from cart?')) clearCart(); }}
+                onClick={() => setShowClearCartConfirm(true)}
                 className="inline-flex items-center gap-2 text-sm font-bold hover:text-red-500 transition-colors self-start md:self-auto"
               >
                 <Trash2 size={15} />
@@ -844,6 +846,20 @@ const handlePromoApply = async () => {
           </div>
         )}
       </AnimatePresence>
+
+      <ConfirmModal
+        open={showClearCartConfirm}
+        title="Clear Cart"
+        description="Remove all items from your cart? This action cannot be undone."
+        confirmLabel="Yes, Clear Cart"
+        cancelLabel="Keep Items"
+        tone="danger"
+        onCancel={() => setShowClearCartConfirm(false)}
+        onConfirm={async () => {
+          await clearCart();
+          setShowClearCartConfirm(false);
+        }}
+      />
 
       {/* Shipping Guide Modal */}
       <AnimatePresence>

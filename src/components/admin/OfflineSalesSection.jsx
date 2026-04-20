@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import api from '../../api/axios';
 import { formatPrice } from '../../utils/price';
+import ConfirmModal from '../common/ConfirmModal';
 import BillModal from './BillModal';
 import {
   buildInvoiceDataFromSale,
@@ -147,6 +148,7 @@ const OfflineSalesSection = () => {
   const [saleItems, setSaleItems] = useState([createEmptySaleItem()]);
   const [billPreviewSale, setBillPreviewSale] = useState(null);
   const [selectedSaleNote, setSelectedSaleNote] = useState(null);
+  const [deleteConfirm, setDeleteConfirm] = useState(null);
   const billSummary = useMemo(
     () =>
       saleItems.reduce(
@@ -205,6 +207,14 @@ const OfflineSalesSection = () => {
 
   const closeNoteModal = () => {
     setSelectedSaleNote(null);
+  };
+
+  const openDeleteConfirm = (saleId) => {
+    setDeleteConfirm(saleId);
+  };
+
+  const closeDeleteConfirm = () => {
+    setDeleteConfirm(null);
   };
 
   const loadProducts = async () => {
@@ -619,22 +629,7 @@ const OfflineSalesSection = () => {
   };
 
   const handleDelete = async (saleId) => {
-    if (!window.confirm('Delete this offline sale entry?')) {
-      return;
-    }
-
-    try {
-      await api.delete(`/admin-inventory/offline-sales/${saleId}`);
-
-      if (editingSaleId === saleId) {
-        resetForm();
-      }
-
-      toast.success('Offline sale deleted');
-      await Promise.all([loadProducts(), loadSales(appliedFilters), loadPendingPayments(appliedFilters)]);
-    } catch (error) {
-      toast.error(error.response?.data?.message || 'Failed to delete offline sale');
-    }
+    openDeleteConfirm(saleId);
   };
 
   const handleSheetUpload = async (event) => {
@@ -1458,6 +1453,32 @@ const OfflineSalesSection = () => {
           </div>
         </div>
       )}
+      <ConfirmModal
+        open={Boolean(deleteConfirm)}
+        title="Delete Offline Sale"
+        description="Delete this offline sale entry? This action cannot be undone."
+        confirmLabel="Yes, Delete"
+        tone="danger"
+        onCancel={closeDeleteConfirm}
+        onConfirm={async () => {
+          if (!deleteConfirm) return;
+
+          try {
+            await api.delete(`/admin-inventory/offline-sales/${deleteConfirm}`);
+
+            if (editingSaleId === deleteConfirm) {
+              resetForm();
+            }
+
+            toast.success('Offline sale deleted');
+            await Promise.all([loadProducts(), loadSales(appliedFilters), loadPendingPayments(appliedFilters)]);
+          } catch (error) {
+            toast.error(error.response?.data?.message || 'Failed to delete offline sale');
+          } finally {
+            closeDeleteConfirm();
+          }
+        }}
+      />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { Pencil, Trash2 } from 'lucide-react';
 import api from '../../api/axios';
 import { formatPrice } from '../../utils/price';
+import ConfirmModal from '../common/ConfirmModal';
 
 const expenseTypes = ['Petrol', 'Food', 'Electricity Bill', 'Rent', 'Courier', 'Packing', 'Other'];
 
@@ -27,6 +28,7 @@ const ExpenseManagementSection = () => {
   const [loading, setLoading] = useState(false);
   const [editingExpenseId, setEditingExpenseId] = useState('');
   const [selectedExpenseNote, setSelectedExpenseNote] = useState(null);
+  const [deleteConfirm, setDeleteConfirm] = useState(null);
 
   const loadExpenses = async () => {
     setLoading(true);
@@ -98,21 +100,16 @@ const ExpenseManagementSection = () => {
     setSelectedExpenseNote(null);
   };
 
-  const handleDelete = async (expenseId) => {
-    if (!window.confirm('Delete this expense entry?')) {
-      return;
-    }
+  const openDeleteConfirm = (expenseId) => {
+    setDeleteConfirm(expenseId);
+  };
 
-    try {
-      await api.delete(`/expenses/${expenseId}`);
-      if (editingExpenseId === expenseId) {
-        resetForm();
-      }
-      toast.success('Expense deleted');
-      await loadExpenses();
-    } catch (error) {
-      toast.error(error.response?.data?.message || 'Failed to delete expense');
-    }
+  const closeDeleteConfirm = () => {
+    setDeleteConfirm(null);
+  };
+
+  const handleDelete = async (expenseId) => {
+    openDeleteConfirm(expenseId);
   };
 
   return (
@@ -310,6 +307,30 @@ const ExpenseManagementSection = () => {
           </div>
         </div>
       )}
+      <ConfirmModal
+        open={Boolean(deleteConfirm)}
+        title="Delete Expense"
+        description="Delete this expense entry? This action cannot be undone."
+        confirmLabel="Yes, Delete"
+        tone="danger"
+        onCancel={closeDeleteConfirm}
+        onConfirm={async () => {
+          if (!deleteConfirm) return;
+
+          try {
+            await api.delete(`/expenses/${deleteConfirm}`);
+            if (editingExpenseId === deleteConfirm) {
+              resetForm();
+            }
+            toast.success('Expense deleted');
+            await loadExpenses();
+          } catch (error) {
+            toast.error(error.response?.data?.message || 'Failed to delete expense');
+          } finally {
+            closeDeleteConfirm();
+          }
+        }}
+      />
     </div>
   );
 };
