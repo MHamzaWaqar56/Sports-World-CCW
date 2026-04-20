@@ -90,8 +90,8 @@ const SalesReportSection = () => {
       ? 'rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-4'
       : 'rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4',
     ledgerMini: isDarkTheme
-      ? 'rounded-2xl border border-white/10 bg-[#0d1118]/60 p-3'
-      : 'rounded-2xl border border-slate-200 bg-white p-3',
+      ? 'rounded-2xl border border-white/10 bg-[#0d1118]/60 p-3 min-[320px]:max-[767px]:mt-[15px]'
+      : 'rounded-2xl border border-slate-200 bg-white p-3 min-[320px]:max-[767px]:mt-[15px]',
     tableShell: isDarkTheme
       ? 'overflow-x-auto rounded-[1.75rem] border border-white/10 bg-[#151b24]'
       : 'overflow-x-auto rounded-[1.75rem] border border-slate-200 bg-white',
@@ -261,7 +261,7 @@ const SalesReportSection = () => {
           <div>
             <p className={`text-[11px] font-bold uppercase tracking-[0.28em] ${reportTheme.heading}`}>Performance Analytics</p>
             <h3 className={`mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl ${reportTheme.heading}`}>Sales Report</h3>
-            <p className={`mt-3 max-w-2xl text-sm leading-7 ${reportTheme.subtext}`}>
+            <p className={`mt-3 max-w-2xl text-sm leading-7 ${reportTheme.subtext} min-[320px]:max-[430px]:leading-[20px]`}>
               Combine offline sales history and paid online orders into one premium date-wise report.
             </p>
           </div>
@@ -280,7 +280,7 @@ const SalesReportSection = () => {
                       <Icon size={18} />
                     </div>
                   </div>
-                  <p className={`mt-5 text-2xl font-black tracking-tight md:text-2xl ${kpi.valueClass} `}>{kpi.value}</p>
+                  <p className={`mt-5 text-2xl font-black tracking-tight md:text-2xl ${kpi.valueClass} min-[320px]:max-[430px]:text-[20px] min-[320px]:max-[430px]:mt-0`}>{kpi.value}</p>
                 </div>
               );
             })}

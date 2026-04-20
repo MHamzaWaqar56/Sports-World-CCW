@@ -154,7 +154,7 @@ const OtpVerification = () => {
                 </div>
                 <div>
                   <p className="text-xl font-black uppercase tracking-tight text-white">Sports World</p>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-primary-300">Premium Athletic Goods</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-primary-300 text-white">Premium Athletic Goods</p>
                 </div>
               </Link>
             </div>
@@ -173,7 +173,7 @@ const OtpVerification = () => {
               </div>
 
               <div className="mb-8">
-                <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary-300">
+                <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-white">
                   Enter OTP
                 </p>
                 <h2 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
@@ -219,7 +219,7 @@ const OtpVerification = () => {
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                 </button>
 
-                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-7 text-slate-400">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm leading-7 text-slate-400 min-[320px]:max-[430px]:leading-[20px] text-justify">
                   Didn’t receive the code? Check your spam folder or go back and request a new reset link.
                 </div>
               </form>
