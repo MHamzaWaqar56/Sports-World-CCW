@@ -133,7 +133,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
               Our Origin Story
             </h2>
-            <div className="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 space-y-6 min-[320px]:max-[430px]:text-[14px] min-[320px]:max-[767px]:text-justify">
+            <div className="prose text-justify dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 space-y-6 min-[320px]:max-[430px]:text-[14px] min-[320px]:max-[767px]:text-justify">
               <p>
                 Founded in 2017, Sports World started as a small local shop
                 catering to dedicated cricketers. Frustrated by the lack of

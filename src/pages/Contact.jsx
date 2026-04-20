@@ -60,7 +60,7 @@ const FaqItem = ({ faq, index, open, onToggle }) => {
         onClick={onToggle}
         className="w-full flex items-center justify-between p-6 text-left"
       >
-        <span className="font-semibold text-slate-900 dark:text-white">
+        <span className="font-semibold text-slate-900 dark:text-white min-[320px]:max-[430px]:text-[14px]">
           {faq.q}
         </span>
         <motion.div animate={{ rotate: open ? 180 : 0 }}>
@@ -74,7 +74,7 @@ const FaqItem = ({ faq, index, open, onToggle }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="px-6 pb-6 text-slate-500 dark:text-slate-400 text-sm"
+            className="px-6 pb-6 text-slate-500 dark:text-slate-400 text-sm text-justify min-[320px]:max-[430px]:text-[12px] min-[320px]:max-[430px]:leading-[18px]"
           >
             {faq.a}
           </motion.div>
@@ -141,7 +141,7 @@ const Contact = () => {
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="mx-auto max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8"
+              className="mx-auto max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8 min-[320px]:max-[430px]:leading-[24px]"
             >
               Whether you have a question about premium gear, need sizing guidance, or want to discuss bulk team orders — our experts are ready to assist you.
             </motion.p>
@@ -202,7 +202,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-black text-white text-sm uppercase tracking-[0.16em] mb-1">Headquarters</h4>
-                    <p className="text-slate-400 text-sm leading-6">Sports World<br />College Road, Chichawatni<br />Punjab, Pakistan — 57200</p>
+                    <p className="text-slate-400 text-sm leading-6 min-[320px]:max-[430px]:leading-[20px]">Sports World<br />College Road, Chichawatni<br />Punjab, Pakistan — 57200</p>
                   </div>
                 </div>
 
@@ -303,8 +303,8 @@ const Contact = () => {
                 <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary-300">
                   <Send size={11} />Send a Message
                 </div>
-                <h3 className="text-2xl font-black uppercase tracking-tight ">We'll reply within 2 hours</h3>
-                <p className="mt-2 text-sm text-slate-400">Fill out the form and our team will get back to you promptly.</p>
+                <h3 className="text-2xl font-black uppercase tracking-tight min-[320px]:max-[370px]:text-[19px] min-[371px]:max-[420px]:text-[20px]">We'll reply within 2 hours</h3>
+                <p className="mt-2 text-sm text-slate-400 min-[320px]:max-[430px]:leading-[18px]">Fill out the form and our team will get back to you promptly.</p>
               </div>
 
               <form className="relative z-10 space-y-5" onSubmit={handleSubmit}>
@@ -400,10 +400,10 @@ const Contact = () => {
           <div className="mb-4 inline-flex items-center gap-2 bg-white rounded-full border border-white/10 dark:bg-white/[0.04] px-4 py-2 text-xs font-bold uppercase tracking-[0.26em] text-primary-300">
             <Zap size={12} />Frequently Asked
           </div>
-          <h2 className="text-3xl font-black uppercase tracking-tight  md:text-4xl mb-4">
+          <h2 className="text-3xl font-black uppercase tracking-tight  md:text-4xl mb-4 min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px]">
             Common Questions
           </h2>
-          <p className=" text-base leading-7">
+          <p className=" text-base leading-7 min-[320px]:max-[430px]:leading-[22px]">
             Quick answers to what most athletes ask before reaching out.
           </p>
         </div>
@@ -432,19 +432,19 @@ const Contact = () => {
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white">
               <TrendingUp size={12} />Ready to Upgrade?
             </div>
-            <h2 className="text-3xl font-black text-white md:text-4xl mb-4">
+            <h2 className="text-3xl font-black text-white md:text-4xl mb-4 min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px]">
               Ready to upgrade your game?
             </h2>
-            <p className="text-slate-400 mb-8 leading-relaxed">
+            <p className="text-slate-400 mb-8 leading-relaxed min-[320px]:max-[420px]:hidden">
               Experience the difference that premium, professionally-engineered equipment makes on the field. Browse our full collection today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/shop"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl bg-primary-600 px-8 text-base font-black uppercase tracking-[0.12em] text-white transition-all hover:bg-primary-500 shadow-xl shadow-primary-600/30">
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl bg-primary-600 px-8 text-base font-black uppercase tracking-[0.12em] text-white transition-all hover:bg-primary-500 shadow-xl shadow-primary-600/30 min-[320px]:max-[420px]:text-[12px]">
                 Explore The Collection
               </a>
               <a href="https://wa.me/923000000000" target="_blank"
-                className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/[0.04] px-8 text-base font-bold text-white transition-all hover:bg-white/10">
+                className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/[0.04] px-8 text-base font-bold text-white transition-all hover:bg-white/10 ">
                 <MessageCircle size={18} />WhatsApp Us
               </a>
             </div>
