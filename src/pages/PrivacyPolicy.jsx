@@ -176,7 +176,7 @@ const PolicySection = ({ section, index, open, onToggle, isLightTheme }) => {
   const headerTextClass = isLightTheme ? 'text-slate-900' : 'text-white';
   const subtitleClass = isLightTheme ? 'text-primary-700' : 'text-primary-300';
   const bodyClass = isLightTheme ? 'border-t border-slate-200' : 'border-t border-white/8';
-  const answerClass = isLightTheme ? 'text-sm leading-7 text-slate-600' : 'text-sm leading-7 text-slate-400';
+  const answerClass = isLightTheme ? 'text-sm leading-7 text-slate-600 min-[320px]:max-[430px]:leading-[20px] text-justify' : 'text-justify text-sm leading-7 text-slate-400 min-[320px]:max-[430px]:leading-[20px]';
   const contactCardClass = isLightTheme
     ? 'rounded-2xl border border-slate-200 bg-slate-50 p-4'
     : 'rounded-2xl border border-white/10 bg-white/[0.04] p-4';
@@ -201,7 +201,7 @@ const PolicySection = ({ section, index, open, onToggle, isLightTheme }) => {
           <div className={`w-10 h-10 rounded-2xl flex items-center justify-center shrink-0 ${isLightTheme ? 'bg-primary-50 text-primary-600' : 'bg-primary-500/12 text-white'}`}>
             <section.icon size={18} className={isLightTheme ? 'text-primary-600' : 'text-white'} />
           </div>
-          <h2 className={`text-lg font-black uppercase tracking-tight ${headerTextClass}`}>{section.title}</h2>
+          <h2 className={`text-lg font-black uppercase tracking-tight ${headerTextClass} min-[320px]:max-[430px]:text-[16px] min-[320px]:max-[430px]:leading-[22px]`}>{section.title}</h2>
         </div>
         <span className={`shrink-0 rounded-full p-1.5 transition-colors ${open ? (isLightTheme ? 'bg-primary-500/15 text-primary-600' : 'bg-primary-500/20 text-slate-300') : (isLightTheme ? 'bg-slate-100 text-slate-500' : 'bg-white/[0.06] text-slate-400')}`}>
           {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -313,7 +313,7 @@ const lastUpdated = getLastUpdated();
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="mx-auto mb-8 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8"
+              className="mx-auto mb-8 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8 min-[320px]:max-[430px]:leading-[22px]"
             >
               We are committed to protecting your personal data. This policy explains how Sports World collects, uses, and safeguards your information — especially for our customers in Chichawatni and across Pakistan.
             </motion.p>
@@ -437,10 +437,10 @@ const lastUpdated = getLastUpdated();
             <div className="mb-4 inline-flex items-center text-white gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-300">
               <TrendingUp size={12} />Ready to Shop?
             </div>
-            <h2 className="text-3xl font-black text-white md:text-4xl mb-4">
+            <h2 className="text-3xl font-black text-white md:text-4xl mb-4 min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px]">
               Ready to upgrade your game?
             </h2>
-            <p className="text-slate-400 mb-8 leading-relaxed">
+            <p className="text-slate-400 mb-8 leading-relaxed min-[320px]:max-[420px]:hidden">
               Your data is safe with us. Browse our full premium collection and experience the difference that professional-grade equipment makes on the field.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

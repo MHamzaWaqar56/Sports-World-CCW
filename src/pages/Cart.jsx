@@ -509,11 +509,11 @@ const handlePromoApply = async () => {
 
                 {/* Price Breakdown */}
                 <div className="space-y-3.5 text-sm font-medium border-t border-slate-100 dark:border-dark-border pt-5">
-                  <div className="flex justify-between text-slate-500 dark:text-slate-400">
+                  <div className="flex justify-between text-slate-500 dark:text-slate-400 items-center">
                     <span>Subtotal ({cartItems.length} items)</span>
                     <span className="font-bold text-slate-900 dark:text-white">{formatPrice(subtotal)}</span>
                   </div>
-                  <div className="flex justify-between text-slate-500 dark:text-slate-400">
+                  <div className="flex justify-between text-slate-500 dark:text-slate-400 items-center">
                     <span className="flex items-center gap-1.5 flex-wrap">
                       Shipping Fee
                       <button
