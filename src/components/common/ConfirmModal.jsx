@@ -42,7 +42,7 @@ const ConfirmModal = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onCancel}
-            className="absolute inset-0 bg-slate-950/20"
+            className="absolute inset-0 bg-slate-950/20 bg-none"
           />
 
           <Motion.div

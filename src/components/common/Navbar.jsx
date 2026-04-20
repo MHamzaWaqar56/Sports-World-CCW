@@ -84,13 +84,13 @@ const Navbar = () => {
       }`}
     >
       <div className="container-bound flex items-center justify-between gap-4">
-        <Link to="/" className="group flex items-center gap-3">
+        <Link to="/" className="group flex items-center gap-3 min-[320px]:max-[430px]:gap-[9px]">
           <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-800 text-white shadow-[0_18px_38px_-16px_rgba(220,38,38,0.75)] transition-transform group-hover:scale-105">
             SW
           </div>
           <div className="leading-none">
-            <span className="block text-xl font-black tracking-[0.16em] text-slate-900 dark:text-white min-[320px]:max-[390px]:text-[16px] min-[991px]:max-[1050px]:text-[16px]">SPORTS WORLD</span>
-            <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[0.34em] text-slate-500 dark:text-slate-400">Premium Athletic Goods</span>
+            <span className="block text-xl font-black tracking-[0.16em] text-slate-900 dark:text-white min-[320px]:max-[430px]:text-[14px] min-[991px]:max-[1050px]:text-[16px]">SPORTS WORLD</span>
+            <span className="mt-1 block text-[10px] min-[320px]:max-[430px]:text-[8px] font-semibold uppercase tracking-[0.34em] text-slate-500 dark:text-slate-400">Premium Athletic Goods</span>
           </div>
         </Link>
 

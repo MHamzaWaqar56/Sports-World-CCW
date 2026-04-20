@@ -209,10 +209,10 @@ const Login = () => {
                   <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary-300">
                     {isRegister ? 'Create Account' : 'Welcome Back'}
                   </p>
-                  <h2 className="mt-3 text-3xl font-black tracking-tight text-white">
+                  <h2 className="mt-3 text-3xl min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px] font-black tracking-tight text-white">
                     {isRegister ? 'Join Sports World' : 'Sign In To Continue'}
                   </h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-400">
+                  <p className="mt-3 text-sm leading-7 text-slate-400  min-[320px]:max-[430px]:leading-[24px]">
                     {isRegister
                       ? 'Create your Sports World account to unlock premium gear access and a cleaner performance-driven workflow.'
                       : 'Use your existing Sports World credentials to access orders, dashboard tools, and premium workflows.'}
@@ -265,7 +265,7 @@ const Login = () => {
                     <div className="flex items-center justify-between gap-3">
                       <label className="text-[11px] font-bold uppercase tracking-[0.22em] text-slate-500">Password</label>
                       {!isRegister && (
-                        <Link to="/password/forgot" className="text-[11px] text-[white] font-bold uppercase tracking-[0.18em] text-primary-300 transition-colors hover:text-white">
+                        <Link to="/password/forgot" className="text-[11px] min-[320px]:max-[430px]:text-[10px] text-[white] font-bold uppercase tracking-[0.18em] text-primary-300 transition-colors hover:text-white">
                           Forgot Password?
                         </Link>
                       )}
