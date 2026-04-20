@@ -730,7 +730,7 @@ const OfflineSalesSection = () => {
             <div>
               <p className={`text-[11px] font-bold uppercase tracking-[0.28em] ${offlineTheme.heading}`}>Sports World Sales Console</p>
               <h2 className={`mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl ${offlineTheme.heading}`}>Offline Sales Tracker</h2>
-              <p className={`mt-3 max-w-2xl text-sm leading-7 ${offlineTheme.subtext}`}>
+              <p className={`mt-3 max-w-2xl text-sm leading-7 min-[320px]:max-[430px]:leading-[20px] ${offlineTheme.subtext}`}>
                 Monitor premium counter sales, protect margin visibility, and keep pending collections clearly tracked in one place.
               </p>
             </div>
@@ -795,7 +795,7 @@ const OfflineSalesSection = () => {
       >
         <div>
           <p className={`text-[11px] font-bold uppercase tracking-[0.24em] ${offlineTheme.heading}`}>Import Sheet</p>
-          <h3 className={`mt-2 text-2xl font-black tracking-tight ${offlineTheme.heading}`}>Upload Offline Sales Sheet</h3>
+          <h3 className={`mt-2 text-2xl font-black tracking-tight ${offlineTheme.heading} min-[320px]:max-[430px]:text-[22px] min-[320px]:max-[430px]:leading-[28px]`}>Upload Offline Sales Sheet</h3>
           <p className={`mt-2 text-sm ${offlineTheme.subtext}`}>
             Upload .xlsx or .csv with columns: Date, Product Name, Quantity Sold, Sale Price Per Item, Cost Price Per Item, Payment Mode, Notes
           </p>
@@ -870,7 +870,7 @@ const OfflineSalesSection = () => {
           <div>
             <p className={`text-[11px] font-bold uppercase tracking-[0.24em] ${offlineTheme.heading}`}>Recovery Desk</p>
             <h3 className={`mt-2 text-2xl font-black tracking-tight ${offlineTheme.heading}`}>Pending Payments</h3>
-            <p className={`mt-2 text-sm ${offlineTheme.subtext}`}>
+            <p className={`mt-2 text-sm ${offlineTheme.subtext} min-[320px]:max-[430px]:leading-[20px]`}>
               Track unpaid counter entries from the current filter window without leaving the Offline Sales page.
             </p>
           </div>
@@ -1169,7 +1169,7 @@ const OfflineSalesSection = () => {
                 </button>
               </div>
 
-              <p className={`mt-5 rounded-2xl px-4 py-3 text-xs leading-6 ${isDarkTheme ? 'border border-white/10 bg-white/[0.03] text-slate-400' : 'border border-slate-200 bg-slate-50 text-slate-600'}`}>
+              <p className={`mt-5 rounded-2xl px-4 py-3 text-xs leading-6 min-[320px]:max-[430px]:leading-[20px] min-[320px]:max-[430px]:text-justify ${isDarkTheme ? 'border border-white/10 bg-white/[0.03] text-slate-400' : 'border border-slate-200 bg-slate-50 text-slate-600'}`}>
                 Pending amount is auto-calculated from grand total minus paid amount. Customer name is required whenever a balance remains.
               </p>
             </div>

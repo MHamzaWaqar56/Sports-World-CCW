@@ -103,7 +103,7 @@ const BatRepairSection = () => {
       <section className="panel-premium p-6 md:p-8 space-y-6">
         <div>
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Bat Repair</h3>
-          <p className="text-slate-500 dark:text-slate-400 mt-1">
+          <p className="text-slate-500 dark:text-slate-400 mt-1 min-[320px]:max-[430px]:leading-[20px]">
             Record bat repair services separately from product sales.
           </p>
         </div>
