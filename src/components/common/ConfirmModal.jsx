@@ -42,7 +42,7 @@ const ConfirmModal = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onCancel}
-            className="absolute inset-0 bg-slate-950/20 bg-none min-[320px]:max-[767px]:bg-transparent backdrop-blur-sm transition-opacity"
+            className="absolute inset-0 bg-black min-[320px]:max-[767px]:bg-transparent backdrop-blur-sm transition-opacity"
           />
 
           <Motion.div
@@ -80,7 +80,7 @@ const ConfirmModal = ({
                 type="button"
                 onClick={onCancel}
                 disabled={loading}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-bold  disabled:opacity-60"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-bold "
               >
                 {cancelLabel}
               </button>
