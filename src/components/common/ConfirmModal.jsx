@@ -80,7 +80,7 @@ const ConfirmModal = ({
                 type="button"
                 onClick={onCancel}
                 disabled={loading}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-bold text-slate-200 transition-colors hover:bg-white/[0.08] disabled:opacity-60"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-bold  disabled:opacity-60"
               >
                 {cancelLabel}
               </button>
