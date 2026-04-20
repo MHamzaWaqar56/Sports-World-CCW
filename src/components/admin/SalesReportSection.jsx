@@ -91,7 +91,7 @@ const SalesReportSection = () => {
       : 'rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4',
     ledgerMini: isDarkTheme
       ? 'rounded-2xl border border-white/10 bg-[#0d1118]/60 p-3 min-[320px]:max-[767px]:mt-[15px]'
-      : 'rounded-2xl border border-slate-200 bg-white p-3 min-[320px]:max-[767px]:mt-[15px]',
+      : 'rounded-2xl border border-slate-200 bg-white p-3',
     tableShell: isDarkTheme
       ? 'overflow-x-auto rounded-[1.75rem] border border-white/10 bg-[#151b24]'
       : 'overflow-x-auto rounded-[1.75rem] border border-slate-200 bg-white',
