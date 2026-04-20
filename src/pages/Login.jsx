@@ -94,7 +94,7 @@ const Login = () => {
             <div className="relative">
               <Link to="/" className="inline-flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-600 text-sm font-black uppercase tracking-[0.18em] text-white shadow-[0_18px_42px_-18px_rgba(220,38,38,0.8)]">
-                  KS
+                  SW
                 </div>
                 <div>
                   <p className="text-xl font-black uppercase tracking-tight text-white">Sports World</p>
@@ -195,7 +195,7 @@ const Login = () => {
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
-                  Join Sports World
+                  SIGN UP
                 </Link>
               </div>
 
