@@ -141,7 +141,7 @@ const FAQ = () => {
                       onClick={() => toggle(index)}
                       className="w-full flex items-center justify-between p-6 text-left"
                     >
-                      <span className="font-semibold text-slate-900 dark:text-white">
+                      <span className="font-semibold text-slate-900 dark:text-white min-[320px]:max-[430px]:text-[14px]">
                         {item.q}
                       </span>
                       <motion.div
@@ -158,7 +158,7 @@ const FAQ = () => {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          className="px-6 pb-6 text-slate-500 dark:text-slate-400 text-sm"
+                          className="px-6 pb-6 text-slate-500 dark:text-slate-400 text-sm min-[320px]:max-[430px]:text-[12px] min-[320px]:max-[430px]:leading-[18px]"
                         >
                           {item.a}
                         </motion.div>
@@ -179,7 +179,7 @@ const FAQ = () => {
           <div className="absolute w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:w-[500px] lg:h-[500px] bg-primary-600/20 blur-[100px] rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
 
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-4 min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px]">
               Still have questions?
             </h2>
             <p className="text-slate-400 mb-8">
