@@ -51,7 +51,7 @@ const PageHero = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className={`mx-auto max-w-2xl text-base leading-7 sm:text-lg sm:leading-8 ${isLight ? 'text-slate-600' : 'text-slate-300'}`}
+              className={`mx-auto max-w-2xl text-base leading-7 sm:text-lg sm:leading-8 ${isLight ? 'text-slate-600' : 'text-slate-300'} min-[320px]:max-[430px]:leading-[24px]`}
             >
               {description}
             </Motion.p>

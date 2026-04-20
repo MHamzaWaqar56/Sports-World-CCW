@@ -184,7 +184,7 @@ const ProductCard = ({ product, variant = 'default', badgeLabel = '' }) => {
 
         <div className="relative z-30 mb-4">
           <p
-            className={`peer inline-block cursor-help line-clamp-2 text-sm leading-6 ${useLightShopCard ? 'text-slate-500' : isShopVariant ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'}`}
+            className={`peer inline-block cursor-help line-clamp-2 text-sm leading-6 ${useLightShopCard ? 'text-slate-500' : isShopVariant ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'} min-[320px]:max-[430px]:leading-[20px]`}
           >
             {subtitle}
           </p>

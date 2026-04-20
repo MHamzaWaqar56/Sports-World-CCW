@@ -268,7 +268,7 @@ const Shop = () => {
               <div className="mb-1 inline-flex items-center gap-2 rounded-full border border-primary-500/40 bg-primary-500/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-primary-500" />Deal of the Day
               </div>
-              <h3 className="text-xl font-black leading-tight text-white sm:text-2xl md:text-3xl min-[320px]:max-[400px]:text-[18px]">
+              <h3 className="text-xl font-black leading-tight text-white sm:text-2xl md:text-3xl min-[320px]:max-[400px]:text-[17px]">
                 Season Opener Sale — Up to <span className="text-primary-500">20% Off</span>
               </h3>
               <p className="mx-auto max-w-xl text-sm text-slate-400 md:mx-0">

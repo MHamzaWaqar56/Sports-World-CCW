@@ -123,7 +123,7 @@ const About = () => {
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 to-transparent" />
-            <div className="absolute bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-xs">
+            <div className="absolute bottom-8 left-8 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-xs min-[320px]:max-[767px]:bottom-[0px] min-[320px]:max-[370px]:left-[0px]">
               <p className="text-white font-bold text-lg leading-tight">
                 "We don't just sell equipment; we equip champions for their legacy."
               </p>
@@ -133,7 +133,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
               Our Origin Story
             </h2>
-            <div className="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 space-y-6">
+            <div className="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 space-y-6 min-[320px]:max-[430px]:text-[14px] min-[320px]:max-[767px]:text-justify">
               <p>
                 Founded in 2017, Sports World started as a small local shop
                 catering to dedicated cricketers. Frustrated by the lack of
@@ -162,7 +162,7 @@ const About = () => {
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
             Our Standard
           </h2>
-          <p className="text-lg text-slate-500 dark:text-slate-400">
+          <p className="text-lg text-slate-500 dark:text-slate-400 min-[320px]:max-[430px]:text-[16px] min-[320px]:max-[430px]:leading-[22px]">
             Core pillars that dictate every product we design and every order we
             fulfill.
           </p>
@@ -184,7 +184,7 @@ const About = () => {
                 <value.icon size={28} />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{value.title}</h3>
-              <p className="text-slate-500 dark:text-slate-400 leading-relaxed">{value.desc}</p>
+              <p className="text-slate-500 dark:text-slate-400 leading-relaxed min-[320px]:max-[430px]:leading-[22px]">{value.desc}</p>
             </div>
           ))}
         </div>
@@ -196,7 +196,7 @@ const About = () => {
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
             Our Journey
           </h2>
-          <p className="text-lg text-slate-500 dark:text-slate-400">
+          <p className="text-lg text-slate-500 dark:text-slate-400 min-[320px]:max-[430px]:text-[16px] min-[320px]:max-[430px]:leading-[22px]">
             From a single shop to Pakistan's most trusted sports equipment brand.
           </p>
         </div>
@@ -220,7 +220,7 @@ const About = () => {
                       {m.year}
                     </span>
                     <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{m.title}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{m.desc}</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed min-[320px]:max-[430px]:text-[14px] min-[320px]:max-[430px]:leading-[18px]">{m.desc}</p>
                   </div>
                 </div>
                 {/* center dot */}
@@ -240,7 +240,7 @@ const About = () => {
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
             Meet The Team
           </h2>
-          <p className="text-lg text-slate-500 dark:text-slate-400">
+          <p className="text-lg text-slate-500 dark:text-slate-400 min-[320px]:max-[430px]:text-[16px] min-[320px]:max-[430px]:leading-[22px]">
             The athletes, engineers, and visionaries behind every product.
           </p>
         </div>
@@ -310,7 +310,7 @@ const About = () => {
               <div className="p-6">
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">{member.name}</h3>
                 <p className="text-primary-600 font-semibold text-sm mb-3">{member.role}</p>
-                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{member.bio}</p>
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed min-[320px]:max-[767px]:text-justify min-[320px]:max-[430px]:leading-[18px]">{member.bio}</p>
               </div>
             </div>
           ))}
@@ -328,7 +328,7 @@ const About = () => {
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
               Athletes Speak
             </h2>
-            <p className="text-lg text-slate-500 dark:text-slate-400">
+            <p className="text-lg text-slate-500 dark:text-slate-400 min-[320px]:max-[430px]:text-[16px] min-[320px]:max-[430px]:leading-[22px]">
               Real feedback from the field, not from marketing.
             </p>
           </div>
@@ -357,20 +357,20 @@ const About = () => {
 
       {/* ── CTA ── */}
       <div className="container-bound">
-        <div className="bg-slate-900 dark:bg-slate-950 rounded-[2rem] p-12 lg:p-20 text-center relative overflow-hidden border border-slate-800">
+        <div className="bg-slate-900 dark:bg-slate-950 rounded-[2rem] p-12 lg:p-20 text-center relative overflow-hidden border border-slate-800 min-[320px]:max-[430px]:p-[32px]">
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:40px_40px] pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-600/20 rounded-full blur-[100px] pointer-events-none" />
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-6">
+            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-6 min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px]">
               Ready to upgrade your game?
             </h2>
-            <p className="text-lg text-slate-400 mb-10">
+            <p className="text-lg text-slate-400 mb-10 min-[320px]:max-[399px]:hidden min-[400px]:max-[430px]:text-[16px] min-[400px]:max-[430px]:leading-[22px]">
               Experience the difference that premium, professionally-engineered
               equipment makes on the field.
             </p>
             <Link
               to="/shop"
-              className="btn-primary h-16 px-10 text-lg font-bold shadow-xl shadow-primary-600/30 inline-flex items-center justify-center"
+              className="btn-primary h-16 px-10 text-lg font-bold shadow-xl shadow-primary-600/30 inline-flex items-center justify-center min-[320px]:max-[430px]:text-[16px]"
             >
               Explore The Collection
             </Link>
