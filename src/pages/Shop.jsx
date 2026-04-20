@@ -76,7 +76,7 @@ const servicePerks = [
   { icon: Truck, title: "Free Shipping", desc: "On orders above ₨5,000" },
   { icon: RotateCcw, title: "7-Day Returns", desc: "Hassle-free returns" },
   { icon: ShieldCheck, title: "100% Authentic", desc: "Zero counterfeit gear" },
-  { icon: BadgePercent, title: "Loyalty Points", desc: "Earn on every order" },
+  { icon: Trophy, title: "Quality", desc: "Quality material products" },
 ];
 
 /* ─── countdown hook ──────────────────────────────────────── */
@@ -221,7 +221,7 @@ const Shop = () => {
             <h1 className="mb-4 text-3xl font-black uppercase tracking-tight text-white sm:text-4xl md:mb-5 md:text-6xl">
               Premium <span className="text-primary-500">Cricket & Sports</span> Gear
             </h1>
-            <p className="mx-auto max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+            <p className="mx-auto max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8 min-[320px]:max-[430px]:leading-[24px]">
               Explore the full Sports World collection with premium gear for match day, training, recovery, and every serious upgrade in between.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-400 max-[767px]:hidden">
@@ -268,7 +268,7 @@ const Shop = () => {
               <div className="mb-1 inline-flex items-center gap-2 rounded-full border border-primary-500/40 bg-primary-500/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">
                 <span className="h-2 w-2 animate-pulse rounded-full bg-primary-500" />Deal of the Day
               </div>
-              <h3 className="text-xl font-black leading-tight text-white sm:text-2xl md:text-3xl">
+              <h3 className="text-xl font-black leading-tight text-white sm:text-2xl md:text-3xl min-[320px]:max-[400px]:text-[18px]">
                 Season Opener Sale — Up to <span className="text-primary-500">20% Off</span>
               </h3>
               <p className="mx-auto max-w-xl text-sm text-slate-400 md:mx-0">
@@ -569,13 +569,13 @@ const Shop = () => {
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:40px_40px] pointer-events-none" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-600/20 rounded-full blur-[100px] pointer-events-none" />
           <div className="relative z-10 max-w-xl mx-auto">
-            <div className="mb-4 inline-flex items-center text-white gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-300">
+            <div className="mb-4 inline-flex items-center text-white gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-300 min-[320px]:max-[380px]:text-[10px]">
               <TrendingUp size={12} />New Arrivals Every Week
             </div>
             <h2 className="text-3xl font-black text-white md:text-4xl mb-4">
               Can't find what you need?
             </h2>
-            <p className="text-slate-400 mb-8 leading-relaxed">
+            <p className="text-slate-400 mb-8 leading-relaxed min-[320px]:max-[400px]:hidden">
               Our catalog grows every week. Reach out to our team and we'll source the gear you need, guaranteed authentic and at competitive prices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

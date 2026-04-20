@@ -377,7 +377,7 @@ const Home = () => {
               <span className="h-2 w-2 animate-pulse text-white rounded-full bg-primary-500" /> Flash Sale Live
             </div>
             <h2 className="mt-3 text-2xl font-black leading-tight text-white sm:text-3xl md:text-4xl min-[320px]:max-[400px]:text-[18px] min-[401px]:max-[430px]:text-[22px]">
-              Season Opener Sale — Up to <span className="text-primary-500">40% Off</span>
+              Season Opener Sale — Up to <span className="text-primary-500">20% Off</span>
             </h2>
             <p className="mt-2 text-sm leading-6 text-slate-400 sm:text-base">
               Limited stock. Premium gear at unbeatable prices. Don't miss it.
