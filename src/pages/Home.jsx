@@ -15,10 +15,10 @@ import { businessInfo, localBusinessSchema, organizationSchema, websiteSchema } 
 
 /* ─── static data ─────────────────────────────────────────── */
 const collectionHighlights = [
-  { name: 'Cricket Bats', image: 'https://images.unsplash.com/photo-1593341646782-e0b495cff86d?auto=format&fit=crop&q=80', href: '/shop?category=Bats', desc: 'Hand-finished willow built for timing, pickup, and explosive middle.' },
-  { name: 'Protective Gear', image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80', href: '/shop?category=Kits', desc: 'Pads, gloves, and guards designed for confident all-match protection.' },
-  { name: 'Footwear', image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80', href: '/shop?category=Footwear', desc: 'Performance-first grip and comfort for training blocks and match days.' },
-  { name: 'Training Essentials', image: '/assets/training-essentials.jpg', href: '/shop?category=Accessories', desc: 'Practice tools and utility gear that sharpen every session.' },
+  { name: 'Cricket Bats', image: 'https://res.cloudinary.com/da8lxpc3h/image/upload/v1776739759/bat-collection_hq8qgl.avif', href: '/shop?category=Bats', desc: 'Hand-finished willow built for timing, pickup, and explosive middle.' },
+  { name: 'Protective Gear', image: 'https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif', href: '/shop?category=Kits', desc: 'Pads, gloves, and guards designed for confident all-match protection.' },
+  { name: 'Footwear', image: 'https://res.cloudinary.com/da8lxpc3h/image/upload/v1776739971/sportsworld-footware-collection_rd6gce.avif', href: '/shop?category=Footwear', desc: 'Performance-first grip and comfort for training blocks and match days.' },
+  { name: 'Training Essentials', image: 'https://res.cloudinary.com/da8lxpc3h/image/upload/v1776740045/training-essentials_ny29o0.jpg', href: '/shop?category=Accessories', desc: 'Practice tools and utility gear that sharpen every session.' },
 ];
 
 const featuredCallouts = [
@@ -31,7 +31,7 @@ const tickerItems = [
   { icon: Truck, text: 'Free Shipping on Orders Over ₨5,000' },
   { icon: Zap, text: '24-Hour Dispatch on All In-Stock Items' },
   { icon: Trophy, text: 'Grade A English Willow Now In Stock' },
-  { icon: BadgePercent, text: 'Flat 15% Off on First Order — Use: SPORTS15' },
+  { icon: BadgePercent, text: 'Flat 5% Off on First Order — Use: SPORTSWORLD26' },
   { icon: ShieldCheck, text: 'Authentic Gear. Zero Counterfeits. Guaranteed.' },
   { icon: RotateCcw, text: 'New Season Kits Dropped — Shop Now' },
 ];
@@ -273,7 +273,7 @@ const Home = () => {
       ══════════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-slate-950">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80" alt="Sports World" className="h-full w-full object-cover opacity-30" />
+          <img src="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif" alt="Sports World" className="h-full w-full object-cover opacity-30" />
         </div>
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_left,rgba(220,38,38,0.34),transparent_24%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.12),transparent_24%),linear-gradient(180deg,rgba(2,6,23,0.18),rgba(2,6,23,0.82))]" />
         <div className="absolute inset-0 z-0 bg-gradient-to-r from-slate-950 via-slate-950/88 to-slate-950/30" />
@@ -309,7 +309,7 @@ const Home = () => {
             <div className="absolute -right-8 bottom-8 hidden h-48 w-48 rounded-full bg-primary-600/16 blur-3xl lg:block" />
             <div className="relative overflow-hidden rounded-[2.1rem] border border-white/12 bg-white/[0.07] p-3 shadow-[0_34px_100px_-42px_rgba(0,0,0,0.96)] backdrop-blur-xl sm:p-4">
               <div className="relative overflow-hidden rounded-[1.8rem]">
-                <img src="/assets/babar-azam-test-img.jpg" alt="Featured gear" className="h-[320px] w-full object-cover object-center transition-transform duration-700 hover:scale-[1.02] sm:h-[420px] lg:h-[560px]" />
+                <img src="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776740615/sports-world-babar-azam-hero_gndydp.jpg" alt="Featured gear" className="h-[320px] w-full object-cover object-center transition-transform duration-700 hover:scale-[1.02] sm:h-[420px] lg:h-[560px]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent" />
                 <div className="absolute left-4 top-4 max-[767px]:bottom-[1rem] max-[767px]:top-[unset] rounded-2xl border border-white/15 bg-slate-950/68 px-3 py-2.5 backdrop-blur-md sm:left-5 sm:top-5 sm:px-4 sm:py-3">
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-slate-400">Featured Gear</p>
@@ -330,7 +330,7 @@ const Home = () => {
                     </div>
                     <div className="mt-5 grid min-[1024px]:max-[1260px]:grid-cols-1 min-[1024px]:max-[1260px]:justify-center gap-3 border-t border-white/10 pt-4 sm:grid-cols-[1fr_auto] sm:items-center">
                       <div className="flex flex-wrap items-center gap-3">
-                        {['/assets/front-foot-babar-azam.jpg','/assets/babar-azam.jpg','/assets/straight-drive-babar-azam.jpg'].map((p, i) => (
+                        {['https://res.cloudinary.com/da8lxpc3h/image/upload/v1776740323/front-foot-babar-azam_zbphe4.jpg','https://res.cloudinary.com/da8lxpc3h/image/upload/v1776740362/babar-azam_xj1yst.jpg','https://res.cloudinary.com/da8lxpc3h/image/upload/v1776740396/straight-drive-babar-azam_gxjn3z.jpg'].map((p, i) => (
                           <div key={p} className={`h-14 w-14 overflow-hidden rounded-2xl border border-white/10 bg-white/10 ${i === 1 ? 'ring-2 ring-primary-500/70' : ''}`}>
                             <img src={p} alt="preview" className="h-full w-full object-cover" />
                           </div>

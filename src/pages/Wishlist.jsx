@@ -206,7 +206,7 @@ const Wishlist = () => {
         <div className="relative mb-8 overflow-hidden rounded-[2.25rem] border border-white/10 bg-[#0c1017] px-6 py-14 shadow-[0_28px_80px_-40px_rgba(0,0,0,0.9)] md:px-10 md:py-16">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(220,38,38,0.18),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.08),transparent_24%)]" />
           <div className="absolute inset-0 opacity-10">
-            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80" alt="backdrop" className="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <img src="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif" alt="backdrop" className="h-full w-full object-cover" loading="lazy" decoding="async" />
           </div>
           <div className="relative z-10 flex flex-col items-center gap-6 text-center">
             <div className="flex flex-col items-center">

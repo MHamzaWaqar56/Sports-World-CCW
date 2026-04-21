@@ -212,7 +212,7 @@ const Shop = () => {
         <div className="relative mb-8 overflow-hidden rounded-[2.25rem] border border-white/10 bg-[#0c1017] px-5 py-14 shadow-[0_28px_80px_-40px_rgba(0,0,0,0.9)] sm:px-6 sm:py-16 md:px-10 md:py-24">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(220,38,38,0.18),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.08),transparent_24%)]" />
           <div className="absolute inset-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80" alt="backdrop" className="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <img src="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif" alt="backdrop" className="h-full w-full object-cover" loading="lazy" decoding="async" />
           </div>
           <div className="relative z-10 text-center max-w-3xl mx-auto">
             <div className="mb-5 inline-flex min-[320px]:max-[380px]:text-[10px] text-white items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-xs font-bold uppercase tracking-[0.26em] text-primary-300 backdrop-blur-xl">

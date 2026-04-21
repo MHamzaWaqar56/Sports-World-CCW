@@ -1,7 +1,7 @@
 import { API_ORIGIN } from '../api/axios';
 
 const FALLBACK_IMAGE =
-  'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80';
+  'https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif';
 
 const normalizeImagePath = (imagePath = '') => {
   const normalizedPath = String(imagePath).replace(/\\/g, '/').trim();

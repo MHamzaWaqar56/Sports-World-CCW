@@ -10,7 +10,7 @@ const PageHero = ({
   highlight,
   description,
   chips = [],
-  imageUrl = 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80',
+  imageUrl = 'https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif',
   Icon = Sparkles,
   tone = 'dark',
 }) => {

@@ -85,7 +85,7 @@ const About = () => {
           'Trusted by 10K+ athletes',
           'Premium quality standards',
         ]}
-        imageUrl="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80"
+        imageUrl="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif"
       />
 
       {/* ── Stats Bar ── */}
@@ -118,7 +118,7 @@ const About = () => {
         <div className="panel-premium flex flex-col overflow-hidden p-0 lg:flex-row">
           <div className="lg:w-1/2 relative min-h-[280px] sm:min-h-[340px] lg:min-h-[400px]">
             <img
-              src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80"
+              src="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif"
               alt="Athletes in training"
               className="absolute inset-0 w-full h-full object-cover"
             />
