@@ -3,7 +3,7 @@ import { useContactStore } from "../../store/useContactStore";
 import { useEffect } from "react";
 
 const MessageSection = () => {
-  const { messages, getMessages, deleteMessage, markAsRead } = useContactStore();
+  const { messages, getMessages, deleteMessage } = useContactStore();
 
   useEffect(() => {
     getMessages();
@@ -16,7 +16,6 @@ const MessageSection = () => {
           key={msg._id}
           message={msg}
           onDelete={deleteMessage}
-          onRead={markAsRead}
         />
       ))}
     </div>

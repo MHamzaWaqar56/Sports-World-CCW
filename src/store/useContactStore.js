@@ -1,5 +1,9 @@
 
 import { create } from "zustand";
+import api from '../api/axios';
+
+const getErrorMessage = (error, fallback) =>
+  error.response?.data?.message || error.message || fallback;
 
 export const useContactStore = create((set, get) => ({
   loading: false,
@@ -13,19 +17,7 @@ export const useContactStore = create((set, get) => ({
     try {
       set({ loading: true, success: false, error: null });
 
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.message || "Something went wrong");
-      }
+      await api.post('/contact', formData);
 
       set({
         loading: false,
@@ -38,7 +30,7 @@ export const useContactStore = create((set, get) => ({
     } catch (err) {
       set({
         loading: false,
-        error: err.message,
+        error: getErrorMessage(err, 'Failed to send message'),
         success: false,
       });
 
@@ -51,12 +43,7 @@ export const useContactStore = create((set, get) => ({
     try {
       set({ loading: true, error: null });
 
-      const res = await fetch("http://localhost:5000/api/contact/getcontacts");
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.message);
-      }
+      const { data } = await api.get('/contact/getcontacts');
 
       set({
         loading: false,
@@ -66,36 +53,15 @@ export const useContactStore = create((set, get) => ({
     } catch (err) {
       set({
         loading: false,
-        error: err.message,
+        error: getErrorMessage(err, 'Failed to fetch messages'),
       });
-    }
-  },
-
-  // 👁️ MARK AS READ
-  markAsRead: async (id) => {
-    try {
-      await fetch(`http://localhost:5000/api/contact/${id}/read`, {
-        method: "PUT",
-      });
-
-      // UI update without refetch 🔥
-      set({
-        messages: get().messages.map((msg) =>
-          msg._id === id ? { ...msg, isRead: true } : msg
-        ),
-      });
-
-    } catch (err) {
-      console.error(err);
     }
   },
 
   // ❌ DELETE MESSAGE
   deleteMessage: async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/contact/${id}`, {
-        method: "DELETE",
-      });
+      await api.delete(`/contact/${id}`);
 
       // remove from state instantly 🔥
       set({
@@ -103,7 +69,9 @@ export const useContactStore = create((set, get) => ({
       });
 
     } catch (err) {
-      console.error(err);
+      set({
+        error: getErrorMessage(err, 'Failed to delete message'),
+      });
     }
   },
 
