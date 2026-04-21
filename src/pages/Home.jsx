@@ -354,7 +354,7 @@ const Home = () => {
           TICKER / MARQUEE
       ══════════════════════════════════════════ */}
       <section className="overflow-hidden border-y border-white/10 bg-primary-600 py-2.5 sm:py-3">
-        <div className="flex animate-[marquee_28s_linear_infinite] whitespace-nowrap">
+        <div className="flex w-max animate-[marquee_42s_linear_infinite] max-[640px]:animate-[marquee_36s_linear_infinite] whitespace-nowrap">
           {[...tickerItems, ...tickerItems].map((item, i) => (
             <span key={i} className="mx-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white min-[320px]:max-[430px]:text-[12px]">
               <item.icon size={14} className="shrink-0 text-white/90" />
