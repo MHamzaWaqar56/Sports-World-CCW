@@ -2584,7 +2584,7 @@ const onSaveCancelReason = async () => {
       {promoStatsModal && (
         <motion.div
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-          className={`fixed inset-0 !mt-[0px] z-50 flex items-center justify-center ${isDarkTheme ? "bg-black/70 backdrop-blur-sm" : "bg-transparent"}`}
+          className={`fixed inset-0 !mt-[0px] z-50 flex items-center justify-center ${isDarkTheme ? "bg-black/70 backdrop-blur-sm" : "bg-white/5 backdrop-blur-sm"}`}
         >
           <motion.div
             initial={{ scale: 0.9, y: 16 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.9, y: 16 }}
@@ -4070,7 +4070,7 @@ const onSaveCancelReason = async () => {
 
             <AnimatePresence>
   {showProductsModal && (
-    <motion.div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent">
+    <motion.div className="fixed inset-0 z-50 flex items-center justify-center bg-white/5 backdrop-blur-sm">
       <div className="bg-white dark:bg-dark-card p-6 rounded-2xl w-full max-w-2xl">
 
         <h2 className="text-lg font-bold mb-4">Ordered Products</h2>
@@ -4127,7 +4127,7 @@ const onSaveCancelReason = async () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-transparent"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-white/5 backdrop-blur-sm"
     >
       <motion.div
         initial={{ scale: 0.95 }}
@@ -4188,7 +4188,7 @@ const onSaveCancelReason = async () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="fixed inset-0 z-50 flex items-center justify-center bg-transparent"
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-white/5 backdrop-blur-sm"
                 >
                   <motion.div
                     initial={{ scale: 0.9 }}
@@ -4262,7 +4262,7 @@ const onSaveCancelReason = async () => {
             <AnimatePresence>
   {showAddressModal && (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-transparent"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-white/5 backdrop-blur-sm"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

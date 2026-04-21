@@ -713,7 +713,7 @@ const OfflineSalesSection = () => {
         buttonSecondary: 'inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] text-slate-700 transition-all hover:border-slate-300 hover:bg-slate-50',
         buttonGhost: 'inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition-all hover:border-slate-300 hover:bg-slate-50',
         chipSurface: 'rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500',
-        modalBackdrop: 'fixed inset-0 z-50 flex items-center justify-center bg-transparent p-4',
+        modalBackdrop: 'fixed inset-0 z-50 flex items-center justify-center bg-white/5 p-4 backdrop-blur-sm',
         modalShell: 'w-full max-w-lg rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_32px_100px_-40px_rgba(15,23,42,0.22)]',
         noteCard: 'rounded-2xl border border-slate-200 bg-slate-50 p-4',
         noteText: 'text-slate-600',

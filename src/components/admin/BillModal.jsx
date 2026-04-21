@@ -268,7 +268,7 @@ const BillModal = ({ sale, onClose }) => {
         iconButton: 'inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] p-3 text-white transition-all hover:border-white/20 hover:bg-white/[0.08]',
       }
     : {
-        backdrop: 'fixed inset-0 z-[120] flex items-center justify-center bg-transparent p-4',
+        backdrop: 'fixed inset-0 z-[120] flex items-center justify-center bg-white/5 p-4 backdrop-blur-sm',
         shell: 'w-full max-w-4xl overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_35px_90px_-30px_rgba(15,23,42,0.18)]',
         header: 'flex flex-col gap-4 border-b border-slate-200 p-6 sm:flex-row sm:items-center sm:justify-between',
         body: 'rounded-[2rem] border border-slate-200 bg-slate-50 p-6',

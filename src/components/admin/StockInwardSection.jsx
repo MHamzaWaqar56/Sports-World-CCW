@@ -653,7 +653,7 @@ const StockInwardSection = () => {
         panelDark: 'rounded-[1.2rem] border border-slate-200 bg-white px-4 py-3',
         smallButton: 'rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-700 transition-all hover:bg-slate-50',
         smallButtonXs: 'rounded-2xl border border-slate-200 bg-white px-3 py-3 text-xs font-bold uppercase tracking-[0.14em] text-slate-700 transition-all hover:bg-slate-50',
-        modalBackdrop: 'fixed inset-0 z-50 flex items-center justify-center bg-transparent p-4',
+        modalBackdrop: 'fixed inset-0 z-50 flex items-center justify-center bg-white/5 p-4 backdrop-blur-sm',
         modalShell: 'w-full max-w-2xl rounded-[2rem] border border-slate-200 bg-white shadow-[0_30px_80px_-34px_rgba(15,23,42,0.22)]',
       };
 
