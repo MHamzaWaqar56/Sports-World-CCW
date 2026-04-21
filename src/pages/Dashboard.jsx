@@ -1780,7 +1780,7 @@ const onSaveCancelReason = async () => {
                       <p className="truncate text-base font-bold text-white">
                         {userInfo.name}
                       </p>
-                      <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white">
+                      <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.24em] text-white">
                         {isSeller ? "Premium Seller" : "Customer Account"}
                       </p>
                     </div>
