@@ -662,7 +662,7 @@ const handleRatingClick = (e, index) => {
                         Fast Delivery
                       </h4>
                       <p className={`mt-2 text-sm leading-6 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                        Quick dispatch on eligible orders with trusted shipping support.
+                        Quick dispatch on eligible orders with trusted delivery support.
                       </p>
                     </div>
                   </div>

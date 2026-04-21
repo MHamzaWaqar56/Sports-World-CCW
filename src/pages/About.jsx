@@ -52,7 +52,7 @@ const teamMembers = [
 const milestones = [
   { year: '2017', title: 'Founded in Chichawatni', desc: 'Started as a small cricket equipment shop serving local clubs and academies.' },
   { year: '2020', title: 'Pro Athlete Partnerships', desc: 'Signed agreements with 12 first-class cricketers to test and endorse our gear.' },
-  { year: '2021', title: '10,000+ Athletes Served', desc: 'Crossed a major milestone, now shipping to every major city in Pakistan.' },
+  { year: '2021', title: '10,000+ Athletes Served', desc: 'Crossed a major milestone, now delivering to every major city in Pakistan.' },
   { year: '2023', title: 'Online Store Launched', desc: 'Expanded digitally, reaching athletes across all of Pakistan.' },
   { year: '2024', title: 'Multi-Sport Expansion', desc: 'Launched football, badminton, and fitness gear lines alongside our cricket roots.' },
 ];

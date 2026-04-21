@@ -19,7 +19,7 @@ const tocSections = [
   { id: "eligibility",        icon: UserX,        title: "Eligibility & Account"        },
   { id: "products-orders",    icon: ShoppingCart, title: "Products & Orders"            },
   { id: "pricing-payment",    icon: CreditCard,   title: "Pricing & Payment"            },
-  { id: "shipping-delivery",  icon: Truck,        title: "Account & Disputes"           },
+  { id: "account-disputes",   icon: Truck,        title: "Account & Disputes"           },
   { id: "returns-refunds",    icon: RefreshCw,    title: "Terms Updates"                },
   { id: "prohibited",         icon: Ban,          title: "Contact & Support"            },
   { id: "contact-terms",      icon: Mail,         title: "Contact Us"                   },
@@ -44,7 +44,7 @@ const sections = [
     content: [
       {
         subtitle: "Can I cancel my order after placing it?",
-        text: "You may request a cancellation via WhatsApp or email before the order is dispatched. Cancellations are not possible once the order has been dispatched or shipped.",
+        text: "You may request a cancellation via WhatsApp or email before the order is dispatched. Cancellations are not possible once the order has been dispatched or delivered.",
       },
       {
         subtitle: "How long does delivery take?",
@@ -83,7 +83,7 @@ const sections = [
     ],
   },
   {
-    id: "shipping-delivery",
+    id: "account-disputes",
     icon: Truck,
     title: "Account & Disputes",
     content: [

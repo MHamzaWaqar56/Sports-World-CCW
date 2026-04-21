@@ -73,7 +73,7 @@ const trustStats = [
 ];
 
 const servicePerks = [
-  { icon: Truck, title: "Free Shipping", desc: "On orders above ₨5,000" },
+  { icon: Truck, title: "Free Delivery", desc: "On orders above ₨5,000" },
   { icon: RotateCcw, title: "7-Day Returns", desc: "Hassle-free returns" },
   { icon: ShieldCheck, title: "100% Authentic", desc: "Zero counterfeit gear" },
   { icon: Trophy, title: "Quality", desc: "Quality material products" },

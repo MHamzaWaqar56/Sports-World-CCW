@@ -28,7 +28,7 @@ const featuredCallouts = [
 ];
 
 const tickerItems = [
-  { icon: Truck, text: 'Free Shipping on Orders Over ₨5,000' },
+  { icon: Truck, text: 'Free Delivery on Orders Over ₨5,000' },
   { icon: Zap, text: '24-Hour Dispatch on All In-Stock Items' },
   { icon: Trophy, text: 'Grade A English Willow Now In Stock' },
   { icon: BadgePercent, text: 'Flat 5% Off on First Order — Use: SPORTSWORLD26' },
@@ -47,7 +47,7 @@ const compareRows = [
 ];
 
 const serviceFeatures = [
-  { icon: Truck, title: 'Free Shipping', desc: 'On all orders above ₨5,000. Same-day dispatch for in-stock items.', badge: '5K+ Orders' },
+  { icon: Truck, title: 'Free Delivery', desc: 'On all orders above ₨5,000. Same-day dispatch for in-stock items.', badge: '5K+ Orders' },
   { icon: RotateCcw, title: '7-Day Returns', desc: 'Not satisfied? Return within 7 days for a full refund or exchange.', badge: 'Hassle Free' },
   { icon: Headphones, title: '24/7 Support', desc: 'Our athlete-support team is available around the clock for queries.', badge: 'Always On' },
   { icon: Trophy, title: 'Quality', desc: 'Premium materials, and reliable performance on every order.', badge: 'Premium Build' },

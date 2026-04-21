@@ -29,7 +29,7 @@ const roundCurrency = (value) => Number(Number(value || 0).toFixed(2));
 /* ─── Checkout Step Indicator ─────────────────────────────── */
 const StepIndicator = ({ currentStep }) => {
   const steps = [
-    { id: 1, label: 'Shipping', icon: MapPin },
+    { id: 1, label: 'Delivery', icon: MapPin },
     { id: 2, label: 'Payment', icon: CreditCard },
     { id: 3, label: 'Confirm', icon: CheckCircle },
   ];
@@ -440,7 +440,7 @@ const handlePromoApply = async () => {
                 </div>
               </div>
 
-              {/* ── Shipping Notice Banner ── */}
+              {/* ── Delivery Notice Banner ── */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
                 className={`mt-4 rounded-2xl border px-5 py-4 flex items-center gap-3 ${
@@ -452,12 +452,12 @@ const handlePromoApply = async () => {
                 <Truck size={18} className={subtotal >= 5000 ? 'text-green-500' : 'text-amber-500'} />
                 {subtotal >= 5000 ? (
                   <p className="text-sm font-bold text-green-700 dark:text-green-400">
-                    🎉 You've unlocked <span className="underline">Free Shipping!</span>
+                    🎉 You've unlocked <span className="underline">Free Delivery!</span>
                   </p>
                 ) : (
                   <p className="text-sm font-medium text-amber-700 dark:text-amber-400">
                     Add <span className="font-black">{formatPrice(5000 - subtotal)}</span> more to get{' '}
-                    <span className="font-black">Free Shipping</span>
+                    <span className="font-black">Free Delivery</span>
                   </p>
                 )}
               </motion.div>
@@ -515,14 +515,14 @@ const handlePromoApply = async () => {
                   </div>
                   <div className="flex justify-between text-slate-500 dark:text-slate-400 items-center">
                     <span className="flex items-center gap-1.5 flex-wrap">
-                      Shipping Fee
+                      Delivery Fee
                       <button
                         type="button"
                         onClick={() => setShowShippingGuide(true)}
                         className="inline-flex items-center gap-1 rounded-full border border-primary-200 bg-primary-50 px-2 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-primary-700 transition-colors hover:bg-primary-100 dark:border-primary-500/30 dark:bg-primary-500/10 dark:text-primary-300 dark:hover:bg-primary-500/15"
                       >
                         <HelpCircle size={11} />
-                        Shipping Guide
+                        Delivery Guide
                       </button>
                     </span>
                     <span className="font-bold text-slate-900 dark:text-white">{formatPrice(shippingFee)}</span>
@@ -617,7 +617,7 @@ const handlePromoApply = async () => {
               {/* Scrollable Body */}
               <div className="px-6 md:px-8 pb-4 overflow-y-auto hide-scrollbar flex-1">
 
-                {/* ── STEP 1: Shipping ── */}
+                {/* ── STEP 1: Delivery ── */}
                 {checkoutStep === 1 && (
                   <form id="shippingForm" onSubmit={handleNextStep} className="space-y-5 pb-2">
                     <div className="flex items-center gap-2 mb-1">
@@ -861,13 +861,13 @@ const handlePromoApply = async () => {
         }}
       />
 
-      {/* Shipping Guide Modal */}
+      {/* Delivery Guide Modal */}
       <AnimatePresence>
         {showShippingGuide && (
           <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
             <motion.button
               type="button"
-              aria-label="Close shipping guide"
+              aria-label="Close delivery guide"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -885,10 +885,10 @@ const handlePromoApply = async () => {
               <div className="flex items-center justify-between border-b border-slate-100 px-6 py-5 dark:border-white/10">
                 <div>
                   <p className="text-[11px] font-black uppercase tracking-[0.26em] text-primary-600 dark:text-primary-400">
-                    Shipping Guidance
+                    Delivery Guidance
                   </p>
                   <h3 className="mt-1 text-xl font-black text-slate-900 dark:text-white">
-                    Shipping Fee Slabs
+                    Delivery Fee Slabs
                   </h3>
                 </div>
                 <button
@@ -902,7 +902,7 @@ const handlePromoApply = async () => {
 
               <div className="space-y-4 px-6 py-6">
                 <p className="text-sm leading-6 text-slate-600 dark:text-slate-300 text-justify min-[320px]:max-[430px]:leading-[20px]">
-                  Shipping fees are calculated based on the subtotal of the items. This fee is added before the discount is applied, and then apply the promo discount to the final total.
+                  Delivery fees are calculated based on the subtotal of the items. This fee is added before the discount is applied, and then apply the promo discount to the final total.
                 </p>
 
                 <div className="grid gap-3">
@@ -925,7 +925,7 @@ const handlePromoApply = async () => {
                 </div>
 
                 <div className="rounded-2xl border border-primary-200 bg-primary-50 px-4 py-3 text-sm text-primary-900 dark:border-primary-500/20 dark:bg-primary-500/10 dark:text-white">
-                  Promo discount is applied after shipping fee is added to the items subtotal.
+                  Promo discount is applied after delivery fee is added to the items subtotal.
                 </div>
               </div>
             </motion.div>
