@@ -84,7 +84,7 @@ const App = () => {
               </Route>
 
               <Route element={<ProtectedRoute sellerOnly />}>
-                <Route path="/admin" element={<Navigate to="/admin/sales-report" replace />} />
+                <Route path="/admin" element={<Navigate to="/admin/orders" replace />} />
                 <Route path="/admin/business-summary" element={<Dashboard />} />
                 <Route path="/admin/add-product" element={<Dashboard />} />
                 <Route path="/admin/performances" element={<Dashboard />} />
