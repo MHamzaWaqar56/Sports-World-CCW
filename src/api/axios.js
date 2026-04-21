@@ -1,11 +1,21 @@
 import axios from 'axios';
 
 const rawApiUrl = import.meta.env.VITE_API_URL;
-const normalizedApiUrl = rawApiUrl.replace(/\/+$/, '').endsWith('/api')
-  ? rawApiUrl.replace(/\/+$/, '')
-  : `${rawApiUrl.replace(/\/+$/, '')}/api`;
-export const API_BASE_URL = normalizedApiUrl;
-export const API_ORIGIN = normalizedApiUrl.replace(/\/api$/, '');
+
+const getApiBaseUrl = () => {
+  if (typeof rawApiUrl === 'string' && rawApiUrl.trim()) {
+    const trimmed = rawApiUrl.trim().replace(/\/+$/, '');
+    return trimmed.endsWith('/api') ? trimmed : `${trimmed}/api`;
+  }
+
+  // Safe fallback: same-origin API (works with reverse proxies / Vercel rewrites).
+  return '/api';
+};
+
+export const API_BASE_URL = getApiBaseUrl();
+export const API_ORIGIN = API_BASE_URL.endsWith('/api')
+  ? API_BASE_URL.slice(0, -4)
+  : API_BASE_URL;
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -30,7 +40,9 @@ api.interceptors.request.use(
         }
       }
     } catch (e) {
-      console.error('Error parsing auth token', e);
+      if (import.meta.env.DEV) {
+        console.error('Error parsing auth token', e);
+      }
     }
 
     return config;
