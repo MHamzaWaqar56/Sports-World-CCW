@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
-import axios from 'axios';
 import { Navigate, useNavigate, useParams, Link } from 'react-router-dom';
 import { ArrowRight, Mail, ShieldCheck, Sparkles, KeyRound } from 'lucide-react';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { useAuthStore } from '../../store/useStore';
+import api from '../../api/axios';
 
 const Motion = motion;
 
@@ -44,11 +44,10 @@ const OtpVerification = () => {
 
     setLoading(true);
     try {
-      const request = axios.post(
-        'http://localhost:5000/api/users/otp-verification',
-        { email, otp: enteredOtp },
-        { withCredentials: true }
-      );
+      const request = api.post('/users/otp-verification', {
+        email,
+        otp: enteredOtp,
+      });
 
       toast.promise(request, {
         loading: 'Verifying OTP...',
