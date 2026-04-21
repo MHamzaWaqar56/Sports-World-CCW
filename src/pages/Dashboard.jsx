@@ -2737,7 +2737,7 @@ const onSaveCancelReason = async () => {
                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
                       Product Inventory
                     </h3>
-                    <p className="text-slate-500 dark:text-slate-400 mt-1 min-[320px]:max-[430px]:leading-[20px]">
+                    <p className="text-slate-500 dark:text-slate-400 mt-1 min-[320px]:max-[430px]:leading-[20px] min-[320px]:max-[430px]:text-[14px]">
                       Products are loaded directly from Database and stay
                       persistent across refresh and relogin.
                     </p>
@@ -3078,10 +3078,10 @@ const onSaveCancelReason = async () => {
                       <p className={`text-[11px] font-bold uppercase tracking-[0.28em] ${addProductTheme.eyebrow}`}>
                         Inventory Management
                       </p>
-                      <h3 className={`mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl ${addProductTheme.title}`}>
+                      <h3 className={`mt-3 text-3xl font-black uppercase tracking-tight md:text-4xl min-[320px]:max-[430px]:text-[26px] min-[320px]:max-[430px]:leading-[32px] ${addProductTheme.title}`}>
                         {isEdit ? "Edit Product" : "Add New Product"}
                       </h3>
-                      <p className={`mt-3 max-w-2xl text-sm leading-7 ${addProductTheme.body}`}>
+                      <p className={`mt-3 max-w-2xl text-sm leading-7 ${addProductTheme.body} min-[320px]:max-[430px]:leading-[20px]`}>
                         {isEdit
                           ? "Update product details, media, and specifications while preserving your current Sports World inventory workflow."
                           : "Configure a new premium gear listing for the storefront using the existing product creation and upload flow."}
