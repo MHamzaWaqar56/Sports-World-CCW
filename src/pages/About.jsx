@@ -118,7 +118,7 @@ const About = () => {
         <div className="panel-premium flex flex-col overflow-hidden p-0 lg:flex-row">
           <div className="lg:w-1/2 relative min-h-[280px] sm:min-h-[340px] lg:min-h-[400px]">
             <img
-              src="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776738944/hero-bg_g8kry5.avif"
+              src="https://res.cloudinary.com/da8lxpc3h/image/upload/v1776741373/sports-world-about-img_de0uw3.avif"
               alt="Athletes in training"
               className="absolute inset-0 w-full h-full object-cover"
             />
